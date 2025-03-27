@@ -139,7 +139,9 @@ body {
     height: 200px;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    animation: orbit-spin 10s linear infinite;
   }
+  
   
   .icon {
     position: absolute;
@@ -265,4 +267,22 @@ body {
       gap: 10px;
     }
   }
+  
+  .first-name,
+.last-name {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.first-name:hover,
+.last-name:hover {
+  text-shadow: 0 0 12px #ff0033, 0 0 18px #ff0033;
+  transform: translateY(-2px);
+}
+
+@keyframes orbit-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
   

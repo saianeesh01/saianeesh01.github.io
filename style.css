@@ -175,9 +175,9 @@ footer {
     left: 50%;
     width: 200%;
     height: 200%;
-    pointer-events: none; /* allows clicking through unless hovered */
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    /*pointer-events: none; /* allows clicking through unless hovered */
+    /*opacity: 0; */
+    /*transition: opacity 0.5s ease;*/
     transform: translate(-50%, -50%);
 }
 
@@ -188,12 +188,16 @@ footer {
 
 .icon {
     position: absolute;
-    font-size: 22px;
-    color: #fff;
+    color: white;
     background: #ff0033;
-    border-radius: 50%;
     padding: 10px;
-    transition: transform 0.3s ease;
+    border-radius: 50%;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: auto;
+    z-index: 10;
+    text-decoration: none;
 }
 
 .icon:hover {
@@ -214,4 +218,9 @@ footer {
 /* On hover, reveal orbit icons */
 .orbit-style:hover .icon {
     opacity: 1;
+}
+
+.orbit-style:hover .profile-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 51, 0.75);
 }

@@ -320,3 +320,21 @@ footer {
     padding-bottom: 20px;
     border-bottom: 1px solid #333;
 }
+
+.project-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.project-item h3 {
+    color: #ff0033;
+    margin-bottom: 5px;
+}
+
+.project-item span {
+    display: block;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 10px;
+}

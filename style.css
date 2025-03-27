@@ -126,3 +126,43 @@ footer {
     box-shadow: 0 0 20px rgba(255, 0, 51, 0.75);
     cursor: pointer;
 }
+
+.profile-wrapper {
+    position: relative;
+    width: 200px;
+    margin: 0 auto 20px;
+}
+
+.profile-wrapper:hover .profile-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 51, 0.75);
+}
+
+.social-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-overlay a {
+    color: #fff;
+    font-size: 24px;
+    background: rgba(255, 0, 51, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-overlay a:hover {
+    transform: scale(1.2);
+}
+
+.profile-wrapper:hover .social-overlay {
+    opacity: 1;
+}

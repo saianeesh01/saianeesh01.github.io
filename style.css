@@ -58,3 +58,12 @@ footer {
     color: #aaa;
     margin-top: 30px;
 }
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0077b6;
+    margin-bottom: 15px;
+}

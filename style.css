@@ -338,3 +338,28 @@ footer {
     color: #aaa;
     margin-bottom: 10px;
 }
+
+.name {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.first-name {
+    color: #ff0033;
+    margin-right: 6px;
+}
+
+.last-name {
+    color: #fff;
+}
+
+.name:hover {
+    text-shadow: 0 0 8px #ff0033, 0 0 12px #ff0033;
+    transition: 0.3s ease;
+}

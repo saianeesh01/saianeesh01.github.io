@@ -139,9 +139,7 @@ body {
     height: 200px;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    animation: orbit-spin 10s linear infinite;
   }
-  
   
   .icon {
     position: absolute;
@@ -280,9 +278,6 @@ body {
   transform: translateY(-2px);
 }
 
-@keyframes orbit-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
+
 
   

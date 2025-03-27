@@ -225,18 +225,18 @@ footer {
 
 .icon-left {
     top: 50%;
-    left: -45px;
+    left: -85px;
     transform: translateY(-50%);
 }
 
 .icon-right {
     top: 50%;
-    right: -45px;
+    right: -85px;
     transform: translateY(-50%);
 }
 
 .icon-bottom {
-    bottom: -45px;
+    bottom: -85px;
     left: 50%;
     transform: translateX(-50%);
 }

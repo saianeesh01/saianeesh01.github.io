@@ -211,9 +211,9 @@ footer {
 
 
 /* Orbit positions (like clock points) */
-.icon1 { top: -20px; left: 50%; transform: translateX(-50%); }
-.icon2 { top: 50%; left: 100%; transform: translateY(-50%); }
-.icon3 { bottom: -20px; left: 50%; transform: translateX(-50%); }
+.icon1 { top: 25px; left: 50%; transform: translateX(-50%); }
+.icon2 { top: 50%; left: 165px; transform: translateY(-50%); }
+.icon3 { bottom: 25px; left: 50%; transform: translateX(-50%); }
 
 /* On hover, reveal orbit icons */
 .orbit-style:hover .icon {

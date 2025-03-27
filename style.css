@@ -271,3 +271,42 @@ footer {
     box-shadow: 0 0 25px rgba(255, 0, 51, 0.7);
     cursor: default;
 }
+
+.skill-group {
+    margin-bottom: 40px;
+}
+
+.skill-group h3 {
+    color: #ff0033;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    background: #111;
+    border: 1px solid #ff0033;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.2);
+}
+
+.skill:hover {
+    background: #ff0033;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 0, 51, 0.6);
+    transform: scale(1.05);
+    cursor: default;
+}

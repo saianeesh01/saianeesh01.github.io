@@ -310,3 +310,7 @@ footer {
     transform: scale(1.05);
     cursor: default;
 }
+
+.skills {
+    margin-top: 50px;
+}

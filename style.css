@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .bio {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .links, .projects {
+    margin-top: 30px;
+  }
+  
+  .links ul, .projects ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links ul li, .projects ul li {
+    margin-bottom: 10px;
+  }
+  
+  .links ul li a, .projects ul li a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  
+  .links ul li a:hover, .projects ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 40px;
+  }
+  

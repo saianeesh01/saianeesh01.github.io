@@ -166,3 +166,45 @@ footer {
 .profile-wrapper:hover .social-overlay {
     opacity: 1;
 }
+
+.orbit-style {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 40px;
+}
+
+.social-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* allows clicking through unless hovered */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.orbit-style:hover .social-circle {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.icon {
+    position: absolute;
+    font-size: 22px;
+    color: #fff;
+    background: #ff0033;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.3);
+}
+
+/* Positioning like a clock — feel free to adjust */
+.github    { transform: translate(-50%, -50%) rotate(0deg)   translate(120px) rotate(0deg);   }
+.linkedin  { transform: translate(-50%, -50%) rotate(120deg) translate(120px) rotate(-120deg);}
+.instagram { transform: translate(-50%, -50%) rotate(240deg) translate(120px) rotate(-240deg);}

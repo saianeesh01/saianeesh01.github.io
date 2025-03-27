@@ -1,64 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f9fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f5f9;
     color: #333;
     margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 700px;
-    margin: 50px auto;
-    background-color: white;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-  }
-  
-  header {
+    padding: 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 25px;
+    background: white;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    border-radius: 8px;
+}
+
+.header {
     text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-  }
-  
-  .bio {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .links, .projects {
-    margin-top: 30px;
-  }
-  
-  .links ul, .projects ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .links ul li, .projects ul li {
-    margin-bottom: 10px;
-  }
-  
-  .links ul li a, .projects ul li a {
-    color: #0366d6;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 24px;
+    margin: 0 10px;
     text-decoration: none;
-  }
-  
-  .links ul li a:hover, .projects ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  footer {
+}
+
+section {
+    margin-top: 30px;
+}
+
+h2 {
+    color: #0077b6;
+    border-bottom: 2px solid #caf0f8;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.exp-item, .projects ul, .certifications ul {
+    margin-bottom: 15px;
+}
+
+.exp-item span {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #666;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+footer {
     text-align: center;
-    font-size: 0.8rem;
-    color: #999;
-    margin-top: 40px;
-  }
-  
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 30px;
+}

@@ -45,7 +45,13 @@
     
     
     
+    <div class="resume-download">
+        <a href="Aneesh_Mussim_Resume.pdf" download>
+          <i class="fas fa-file-download"></i> Download My Resume
+        </a>
+      </div>
 
+      
     <!-- About Section -->
     <section class="about">
         <h2>🎓 About Me</h2>
@@ -230,10 +236,29 @@
         </ul>
     </section>
 
+    <section class="easter-egg">
+        <h2>🐾 My Favorite Pokémon</h2>
+        <div class="arcanine-wrapper" onclick="triggerFireGlow()">
+          <img src="https://img.pokemondb.net/artwork/large/arcanine.jpg" alt="Arcanine" class="arcanine-img" />
+          <p>Click me for 🔥</p>
+        </div>
+      </section>
+      
+
     <!-- Footer -->
     <footer>
         <p>© 2024 Aneesh Mussim. All rights reserved.</p>
     </footer>
+
+    <script>
+        function triggerFireGlow() {
+          const arcanine = document.querySelector('.arcanine-img');
+          arcanine.classList.add('fire');
+          setTimeout(() => {
+            arcanine.classList.remove('fire');
+          }, 4000); // glow for 4 seconds
+        }
+      </script>
 
 </div>
 

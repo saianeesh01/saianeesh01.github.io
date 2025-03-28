@@ -430,6 +430,14 @@ body {
     top: 10px;
     left: 10px;
   }
+
+  .opportunity-line {
+    margin-top: 15px;
+    color: #ff0033;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
   
 
   

@@ -18,14 +18,14 @@
   <header id="hero" class="snap">
     <div class="hero-inner">
       <span class="name-part red">Aneesh</span>
-      <div class="pfp-wrapper">
-        <img src="assets/profile_circle.png" alt="Aneesh Mussim" class="pfp">
-        <nav class="orbit">
-          <a href="https://github.com/saianeesh01" class="orbit-icon"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/aneesh-mussim" class="orbit-icon"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:saianeesh01@gmail.com" class="orbit-icon"><i class="fas fa-envelope"></i></a>
-          <a href="assets/Aneesh_Mussim_Resume.pdf" class="orbit-icon" download><i class="fas fa-file-alt"></i></a>
-        </nav>
+      <div class="profile-image-container">
+        <img src="assets/profile_circle.png" alt="Aneesh Mussim" class="profile-img">
+        <div class="social-circle">
+          <a href="https://github.com/saianeesh01" target="_blank" class="icon icon1"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/aneesh-mussim" target="_blank" class="icon icon2"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:saianeesh01@gmail.com" class="icon icon3"><i class="fas fa-envelope"></i></a>
+          <a href="assets/Aneesh_Mussim_Resume.pdf" class="icon icon4" download title="Download Resume"><i class="fas fa-file-alt"></i></a>
+        </div>
       </div>
       <span class="name-part white">Mussim</span>
     </div>
@@ -81,25 +81,155 @@
         <li>Automated 90% regression tests with Python + Playwright.</li>
       </ul>
     </article>
-
-    <!-- Add Capital One, BoA, etc. -->
+    <article class="exp-card">
+      <header>
+        <h3>Teaching Assistant <span>@ VCU CS Dept</span></h3>
+        <time>Aug 2023 – Dec 2023</time>
+      </header>
+      <ul>
+        <li>Guided students through Java programming assignments and theoretical concepts in computer science courses.</li>
+        <li>Conducted tutoring sessions, reviewed code, and provided constructive feedback on assignments.</li>
+        <li>Collaborated with faculty to develop teaching materials and improve student learning outcomes.</li>
+      </ul>
+    </article>
+    <article class="exp-card">
+      <header>
+        <h3>Software Development Intern <span>@ Bank of America</span></h3>
+        <time>Mar 2022 – Oct 2022</time>
+      </header>
+      <ul>
+        <li>Developed a cross-platform mobile app using React Native aimed at enhancing financial literacy for college students.</li>
+        <li>Led user research efforts and applied feedback to optimize the app's UI/UX and engagement.</li>
+        <li>Successfully deployed the application on both iOS and Android platforms.</li>
+      </ul>
+    </article>
+    <article class="exp-card">
+      <header>
+        <h3>Capstone Project <span>@ Capital One</span></h3>
+        <time>Aug 2022 – Apr 2023</time>
+      </header>
+      <ul>
+        <li>Built a real-time cybersecurity event pipeline using AWS services and Datadog’s Vector for secure log processing.</li>
+        <li>Applied natural language processing (NLP) and Synthetic Data Vault to simulate and analyze potential security threats.</li>
+        <li>Collaborated with a multi-disciplinary team to deliver a production-ready solution for incident analysis.</li>
+      </ul>
+    </article>
+    <article class="exp-card">
+      <header>
+        <h3>Web Developer <span>@ VCU Social Good Project</span></h3>
+        <time>Aug 2022 – Dec 2022</time>
+      </header>
+      <ul>
+        <li>Worked with a team to design a JavaScript-based website aimed at improving night-time student transportation safety on campus.</li>
+        <li>Implemented features such as real-time bus tracking, user-friendly schedules, emergency alerts, and account security.</li>
+        <li>Focused on enhancing campus accessibility and safety through practical software solutions.</li>
+      </ul>
+    </article>
+    <article class="exp-card">
+      <header>
+        <h3>Peer Tutor <span>@ VCU CS Dept</span></h3>
+        <time>Aug 2021 – Dec 2021</time>
+      </header>
+      <ul>
+        <li>Assisted students with introductory Java programming labs, debugging, and foundational computer science concepts.</li>
+        <li>Held regular support sessions to guide students through their coursework and enhance their understanding of Java.</li>
+        <li>Strengthened personal programming skills while helping peers succeed academically.</li>
+      </ul>
+    </article>
   </section>
 
   <!-- ===== PROJECTS ===== -->
   <section id="projects" class="snap fade">
     <h2>Projects</h2>
     <div class="proj-grid">
-      <!-- Project card -->
       <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/proposal_scanner_prototype','_blank')">
         <img src="assets/proposal_scanner_thumb.jpg" alt="Proposal Scanner">
         <div class="proj-info">
-          <h3>Proposal Scanner</h3>
-          <p>AI-powered OCR + LLM summariser for immigration proposals.</p>
+          <h3>Proposal Scanner Prototype</h3>
+          <p>AI-powered document scanner using OCR, AWS Textract, FAISS, and LLM summarization for hybrid structured/unstructured document analysis. Supports S3/local, highlights fields, and logs scan history.</p>
         </div>
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
-
-      <!-- more cards ... -->
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/solo-leveling-task-app','_blank')">
+        <img src="assets/solo_leveling_thumb.jpg" alt="Solo Leveling Task App">
+        <div class="proj-info">
+          <h3>Solo Leveling Task App</h3>
+          <p>Gamified productivity app with React Native/Flask, daily AI-generated quests, XP/streak tracking, and LangChain+Ollama quest suggestions. Animated UI, streak rewards, and local persistence.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/court-deadline-tracker','_blank')">
+        <img src="assets/court_deadline_thumb.jpg" alt="Court Deadline Tracker">
+        <div class="proj-info">
+          <h3>Court Deadline Tracker</h3>
+          <p>Legal productivity tool (Flask/React) for attorneys to track/manage court deadlines with natural language input, Google Calendar sync, NER/AI parsing, and real-time alerts.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/Pomodoro','_blank')">
+        <img src="assets/pomodoro_thumb.jpg" alt="Pomodoro Timer">
+        <div class="proj-info">
+          <h3>Pomodoro Timer with Motivation</h3>
+          <p>React/Flask Pomodoro timer with animated running character, motivational texts, and creative UI/UX for productivity and focus.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/Clothing-assistant','_blank')">
+        <img src="assets/clothing_assistant_thumb.jpg" alt="Clothing Consulting Robot">
+        <div class="proj-info">
+          <h3>Clothing Consulting Robot</h3>
+          <p>UiPath/web automation system for weather-based clothing suggestions. Scrapes real-time weather and suggests attire using logic and automation.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/PR-Tracker','_blank')">
+        <img src="assets/fitness_tracker_thumb.jpg" alt="Fitness Tracker App">
+        <div class="proj-info">
+          <h3>Fitness Tracker App</h3>
+          <p>Full-stack fitness tracking app (React/Flask/MySQL) with RESTful APIs, dynamic dashboard, and Dockerized deployment for scalability.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/VideoGameStore','_blank')">
+        <img src="assets/videogame_store_thumb.jpg" alt="Video Game Store Web Application">
+        <div class="proj-info">
+          <h3>Video Game Store Web Application</h3>
+          <p>Full-stack eCommerce platform (HTML/CSS/JS, PHP/MySQL) for browsing, purchasing, and reviewing games. Responsive design, Dockerized, and version controlled.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/venom-run','_blank')">
+        <img src="assets/venom_run_thumb.jpg" alt="Venom Run">
+        <div class="proj-info">
+          <h3>Venom Run</h3>
+          <p>Unity/C# endless runner with symbiote theme, tight movement, reactive enemies, and layered parallax backgrounds. Creative deep dive into fast-paced level design.</p>
+        </div>
+        <span class="hover-msg">Click to Play</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/pro','_blank')">
+        <img src="assets/projectiles_thumb.jpg" alt="Projectiles">
+        <div class="proj-info">
+          <h3>Projectiles</h3>
+          <p>2D sprite-based fighting game (Unity/C#) with pop culture characters, animated attacks, and arcade-style combat systems.</p>
+        </div>
+        <span class="hover-msg">Click to Play</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/flash-run-2','_blank')">
+        <img src="assets/flash_run2_thumb.jpg" alt="Flash Run 2">
+        <div class="proj-info">
+          <h3>Flash Run 2</h3>
+          <p>Sequel to Flash Run: smoother animations, smarter enemies, cinematic VFX, and progressive difficulty. Optimized C# scripts and frame-perfect transitions.</p>
+        </div>
+        <span class="hover-msg">Click to Play</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/flash-run','_blank')">
+        <img src="assets/flash_run_thumb.jpg" alt="Flash Run">
+        <div class="proj-info">
+          <h3>Flash Run</h3>
+          <p>My first programming project: 2D endless runner (Unity/C#) inspired by The Flash and Mega Man. Hand-animated sprites, hit detection, and game logic.</p>
+        </div>
+        <span class="hover-msg">Click to Play</span>
+      </div>
     </div>
   </section>
 

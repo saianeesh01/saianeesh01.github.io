@@ -44,179 +44,53 @@
   </section>
 
   <!-- ===== SKILLS ===== -->
-  <section id="skills" class="snap fade">
-    <h2>Skills & Tools</h2>
-    <div class="skill-grid">
-      <!-- repeat this block per skill -->
-      <div class="skill-logo" data-skill="85">
-        <img src="assets/python.svg" alt="Python">
-        <span class="skill-tooltip">Python&nbsp;85%</span>
-      </div>
+<section id="skills" class="snap fade">
+  <h2>Skills&nbsp;&amp;&nbsp;Tools</h2>
 
-      <div class="skill-logo" data-skill="80">
-        <img src="assets/react.svg" alt="React">
-        <span class="skill-tooltip">React&nbsp;80%</span>
-      </div>
-
-      <div class="skill-logo" data-skill="75">
-        <img src="assets/aws.svg" alt="AWS">
-        <span class="skill-tooltip">AWS&nbsp;75%</span>
-      </div>
-
-      <!-- Add more logos ... -->
+  <!-- reusable logo component -->
+  <template id="skill-template">
+    <div class="skill-logo" data-skill="0">
+      <img src="" alt="">
+      <span class="skill-tooltip"></span>
     </div>
-    <div class="skills-categories">
-      <div class="skill-category">
-        <h3>Languages</h3>
-        <div class="skill-grid">
-          <div class="skill-logo" data-skill="85">
-            <img src="assets/python.svg" alt="Python">
-            <span class="skill-tooltip">Python</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fab fa-java"></i>
-            <span class="skill-tooltip">Java</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fab fa-js-square"></i>
-            <span class="skill-tooltip">JavaScript</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fas fa-c"></i>
-            <span class="skill-tooltip">C</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fas fa-hashtag"></i>
-            <span class="skill-tooltip">C#</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fas fa-database"></i>
-            <span class="skill-tooltip">SQL</span>
-          </div>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Frameworks &amp; Tools</h3>
-        <div class="skill-grid">
-          <div class="skill-logo" data-skill="80">
-            <img src="assets/react.svg" alt="React">
-            <span class="skill-tooltip">React</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fab fa-react"></i>
-            <span class="skill-tooltip">React Native</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fab fa-angular"></i>
-            <span class="skill-tooltip">Angular</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/flask.svg" alt="Flask">
-            <span class="skill-tooltip">Flask</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/docker.svg" alt="Docker">
-            <span class="skill-tooltip">Docker</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/unity.svg" alt="Unity">
-            <span class="skill-tooltip">Unity</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fab fa-git-alt"></i>
-            <span class="skill-tooltip">Git</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fab fa-github"></i>
-            <span class="skill-tooltip">GitHub Actions</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/grpc.svg" alt="gRPC">
-            <span class="skill-tooltip">gRPC</span>
-          </div>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Cloud &amp; Databases</h3>
-        <div class="skill-grid">
-          <div class="skill-logo" data-skill="75">
-            <img src="assets/aws.svg" alt="AWS">
-            <span class="skill-tooltip">AWS (Lambda, S3, Textract, Bedrock)</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/firebase.svg" alt="Firebase">
-            <span class="skill-tooltip">Firebase</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/mysql.svg" alt="MySQL">
-            <span class="skill-tooltip">MySQL</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/postgres.svg" alt="Postgres">
-            <span class="skill-tooltip">Postgres</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/sqlite.svg" alt="SQLite">
-            <span class="skill-tooltip">SQLite</span>
-          </div>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>AI/ML</h3>
-        <div class="skill-grid">
-          <div class="skill-logo">
-            <img src="assets/langchain.svg" alt="LangChain">
-            <span class="skill-tooltip">LangChain</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/ollama.svg" alt="Ollama">
-            <span class="skill-tooltip">Ollama</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/tensorflow.svg" alt="TensorFlow">
-            <span class="skill-tooltip">TensorFlow</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/scikit-learn.svg" alt="scikit-learn">
-            <span class="skill-tooltip">scikit-learn</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/faiss.svg" alt="FAISS">
-            <span class="skill-tooltip">FAISS</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/huggingface.svg" alt="HuggingFace">
-            <span class="skill-tooltip">HuggingFace</span>
-          </div>
-          <div class="skill-logo">
-            <img src="assets/sagemaker.svg" alt="SageMaker">
-            <span class="skill-tooltip">SageMaker</span>
-          </div>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Methods</h3>
-        <div class="skill-grid">
-          <div class="skill-logo">
-            <i class="fas fa-users"></i>
-            <span class="skill-tooltip">Agile</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fas fa-vial"></i>
-            <span class="skill-tooltip">TDD</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fas fa-user-check"></i>
-            <span class="skill-tooltip">User-Centered Design</span>
-          </div>
-          <div class="skill-logo">
-            <i class="fas fa-sync-alt"></i>
-            <span class="skill-tooltip">CI/CD</span>
-          </div>
-        </div>
-      </div>
+  </template>
+
+  <!-- category wrapper -->
+  <div class="skills-categories">
+
+    <!-- ───────── Languages ───────── -->
+    <div class="skill-category">
+      <h3>Languages</h3>
+      <div class="skill-grid" id="lang-skills"></div>
     </div>
-  </section>
+
+    <!-- ───────── Frameworks & Tools ───────── -->
+    <div class="skill-category">
+      <h3>Frameworks&nbsp;&amp;&nbsp;Tools</h3>
+      <div class="skill-grid" id="tool-skills"></div>
+    </div>
+
+    <!-- ───────── Cloud & DB ───────── -->
+    <div class="skill-category">
+      <h3>Cloud&nbsp;&amp;&nbsp;Databases</h3>
+      <div class="skill-grid" id="cloud-skills"></div>
+    </div>
+
+    <!-- ───────── AI / ML ───────── -->
+    <div class="skill-category">
+      <h3>AI&nbsp;/&nbsp;ML</h3>
+      <div class="skill-grid" id="ml-skills"></div>
+    </div>
+
+    <!-- ───────── Methods ───────── -->
+    <div class="skill-category">
+      <h3>Methods</h3>
+      <div class="skill-grid" id="method-skills"></div>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- ===== EXPERIENCE ===== -->
   <section id="experience" class="snap fade">

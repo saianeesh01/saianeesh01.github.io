@@ -71,3 +71,29 @@ footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:rel
   .hero-inner{flex-direction:column;}
   .pfp-wrapper{margin:1.2rem 0;}
 }
+
+/* ---------- skill logo ring ---------- */
+.skill-logo{
+  --size:82px;
+  width:var(--size);height:var(--size);
+  border-radius:50%;position:relative;cursor:pointer;
+}
+.skill-logo img{width:68%;height:68%;object-fit:contain;
+  position:absolute;top:16%;left:16%;
+  filter:drop-shadow(0 0 4px #0005);transition:.25s;
+}
+.skill-logo::before{ /* progress ring */
+  content:'';position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(var(--accent) calc(var(--deg,0)*1%),#3330 0);
+  transition:.4s;
+}
+.skill-logo:hover img{transform:scale(1.1);}
+.skill-tooltip{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:.75rem;text-align:center;line-height:1.1;
+  opacity:0;transition:.25s;
+}
+.skill-logo:hover .skill-tooltip{opacity:1;}
+
+/* adjust grid gap if you like */
+.skill-grid{gap:1.2rem;}

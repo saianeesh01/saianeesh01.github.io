@@ -23,30 +23,35 @@ section{padding:4rem 8vw;}
   text-align: center;
 }
 .name-part {
-  font-size: clamp(2.2rem,6vw,4rem);
-  font-weight: 600;
-  letter-spacing: .05em;
+  font-size: clamp(2.6rem,7vw,4.5rem);
+  font-weight: 700;
+  letter-spacing: .06em;
   position: relative;
   z-index: 2;
+  margin-bottom: 0.5rem;
 }
 .red { color: var(--accent); }
 .white { color: #fff; }
 .profile-image-container {
   position: relative;
-  width: 170px;
-  height: 170px;
+  width: 220px;
+  height: 220px;
   flex-shrink: 0;
-  margin: 0 1.2rem;
+  margin: 0 1.2rem 0 1.2rem;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .profile-img {
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  border: 4px solid var(--accent);
+  border: 5px solid var(--accent);
   object-fit: cover;
   box-shadow: 0 4px 32px #000a, 0 0 0 4px #111;
   transition: transform .35s cubic-bezier(.4,1.6,.6,1), box-shadow .35s;
+  background: #181818;
 }
 .profile-img:hover {
   transform: scale(1.045);
@@ -55,7 +60,7 @@ section{padding:4rem 8vw;}
 .social-circle {
   position: absolute;
   top: 50%; left: 50%;
-  width: 200px; height: 200px;
+  width: 220px; height: 220px;
   transform: translate(-50%,-50%);
   animation: spin 18s linear infinite;
   pointer-events: none;
@@ -63,17 +68,17 @@ section{padding:4rem 8vw;}
 }
 @keyframes spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
 .social-circle .icon {
-  --radius: 90px;
+  --radius: 95px;
   position: absolute;
   top: 50%; left: 50%;
-  width: 40px; height: 40px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   background: var(--accent);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   pointer-events: auto;
   cursor: pointer;
   box-shadow: 0 2px 12px #0007;
@@ -101,16 +106,18 @@ section{padding:4rem 8vw;}
 .hero-inner {
   display: flex;
   align-items: center;
-  gap: 2.2rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
   position: relative;
   z-index: 2;
 }
 @media (max-width: 700px) {
   .hero-inner { flex-direction: column; gap: 1.2rem; }
-  .profile-image-container { margin: 0; }
+  .profile-image-container { margin: 0; width: 140px; height: 140px; }
+  .profile-img { width: 120px; height: 120px; }
   .social-circle { width: 140px; height: 140px; }
-  .social-circle .icon { --radius: 60px; width: 32px; height: 32px; font-size: 1rem; }
+  .social-circle .icon { --radius: 55px; width: 32px; height: 32px; font-size: 1rem; }
+  .name-part { font-size: 2rem; }
 }
 
 /* ===== Fade-in via JS ===== */

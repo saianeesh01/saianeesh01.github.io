@@ -195,3 +195,29 @@ footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:rel
      rotate(calc(-90deg * var(--i)));
   box-shadow:0 0 10px var(--accent);
 }
+/* === 1. Restore head-shot size & keep orbit inside it === */
+.profile-image-container{
+  position:relative;
+  width:170px;         /* back to original */
+  height:170px;
+  flex-shrink:0;       /* never compress in the hero flex row */
+}
+
+.social-circle{
+  position:absolute;
+  top:50%; left:50%;
+  width:240px;         /* slightly tighter ring so it fits nicely */
+  height:240px;
+  transform:translate(-50%,-50%);
+  animation:spin 10s linear infinite;
+  pointer-events:none;
+}
+
+/* === 2. Make sure the names sit on top of the orbit layer === */
+.name-part{position:relative; z-index:2;}
+
+/* === 3. Give the hero row a gap so the last name never overlaps === */
+.hero-inner{
+  display:flex; align-items:center; gap:1.6rem;
+  flex-wrap:wrap;        /* still stacks vertically on small screens */
+}

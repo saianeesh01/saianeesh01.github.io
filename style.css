@@ -156,3 +156,27 @@ footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:rel
   font-size:.8rem;color:#888;margin-top:-.5rem;margin-bottom:1.5rem;
   letter-spacing:.03em;
 }
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+.social-circle .icon {
+  animation: float 4s ease-in-out infinite;
+}
+
+.social-circle .icon:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.social-circle .icon:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.social-circle .icon:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.social-circle .icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px var(--accent);
+}

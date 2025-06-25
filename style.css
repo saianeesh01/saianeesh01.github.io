@@ -103,3 +103,16 @@ footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:rel
 
 /* adjust grid gap if you like */
 .skill-grid{gap:1.2rem;}
+/* ===== Improve logo contrast ===== */
+.skill-logo{
+  border:2px solid #222;          /* subtle outline at rest           */
+  background:#111;                /* dark pad behind white PNG/SVG    */
+}
+.skill-logo img{
+  padding:10%;                    /* lets the dark pad show all round */
+  border-radius:50%;
+}
+.skill-logo:hover{
+  border-color:var(--accent);     /* red outline + subtle glow on hover */
+  box-shadow:0 0 8px rgba(255,0,51,.6);
+}

@@ -156,3 +156,42 @@ footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:rel
   font-size:.8rem;color:#888;margin-top:-.5rem;margin-bottom:1.5rem;
   letter-spacing:.03em;
 }
+/* ===== Orbiting social icons (Iron-Man style) ===== */
+.profile-image-container{position:relative;width:200px;height:200px;}
+
+.social-circle{
+  position:absolute;top:50%;left:50%;
+  width:260px;height:260px;           /* orbit diameter */
+  transform:translate(-50%,-50%);
+  animation:spin 10s linear infinite; /* whole ring rotates */
+  pointer-events:none;                /* icons still clickable via inner anchor */
+}
+
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+
+/* individual icons */
+.social-circle .icon{
+  --radius:130px;                     /* = width/2 of .social-circle */
+  position:absolute;top:50%;left:50%;
+  width:48px;height:48px;border-radius:50%;
+  background:var(--accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.45rem;pointer-events:auto;cursor:pointer;
+  transition:background .25s,transform .25s;
+  
+  /* place each icon around circle using its custom index */
+  transform:
+     rotate(calc(90deg * var(--i)))
+     translate(var(--radius))
+     rotate(calc(-90deg * var(--i)));   /* keep upright */
+}
+
+/* hover pop / color swap */
+.social-circle .icon:hover{
+  background:#fff;color:var(--accent);
+  transform:
+     rotate(calc(90deg * var(--i)))
+     translate(calc(var(--radius) + 6px))
+     rotate(calc(-90deg * var(--i)));
+  box-shadow:0 0 10px var(--accent);
+}

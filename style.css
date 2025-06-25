@@ -146,3 +146,9 @@ footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:rel
 /* hide default scrollbar but keep scrollability */
 .exp-track::-webkit-scrollbar{display:none;}     /* Chrome */
 .exp-track{scrollbar-width:none;}                /* Firefox */
+
+/* icon inside chip */
+.chips img, .chips svg{
+  width:16px;height:16px;margin-right:4px;vertical-align:middle;
+  filter:drop-shadow(0 0 2px #0005);
+}

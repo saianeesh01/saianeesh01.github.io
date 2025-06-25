@@ -7,6 +7,8 @@
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://unpkg.com/lottie-web@5.10.2/build/player/lottie.min.js"></script>
+
 
   <!-- Styles & Script -->
   <link rel="stylesheet" href="style.css">
@@ -31,6 +33,8 @@
     </div>
     <p class="tagline">AI/ML &nbsp;•&nbsp; Full-Stack &nbsp;•&nbsp; Cloud-Native</p>
     <p class="scroll-hint">↓ Scroll to explore more</p>
+    <div id="scroll-lottie" style="width: 80px; height: 80px; margin-top: 20px;"></div>
+
 
   </header>
 
@@ -341,6 +345,15 @@ document.getElementById('expTrack').addEventListener('mousedown', e=>{
   function stop(){window.removeEventListener('mousemove',move);window.removeEventListener('mouseup',stop);}
   window.addEventListener('mousemove',move); window.addEventListener('mouseup',stop);
 });
+</script>
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById('scroll-lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets6.lottiefiles.com/packages/lf20_fyye8szy.json' // scroll down animation
+  });
 </script>
 
   <footer>

@@ -162,8 +162,21 @@ footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:rel
   100% { transform: translateY(0); }
 }
 .social-circle .icon {
+  font-size: 2rem; /* previously 1.5rem maybe */
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: float 4s ease-in-out infinite;
 }
+
 
 .social-circle .icon:nth-child(2) {
   animation-delay: 0.5s;
@@ -179,4 +192,17 @@ footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:rel
 .social-circle .icon:hover {
   transform: scale(1.1);
   box-shadow: 0 0 10px var(--accent);
+}
+
+.scroll-hint {
+  color: var(--accent);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  margin-top: 20px;
+  animation: pulseDown 2s infinite;
+}
+
+@keyframes pulseDown {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50%      { transform: translateY(8px); opacity: 1; }
 }

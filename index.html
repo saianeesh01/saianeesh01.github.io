@@ -116,75 +116,71 @@
 
 
   <!-- ===== EXPERIENCE ===== -->
-  <section id="experience" class="snap fade">
-    <h2>Experience</h2>
+<section id="experience" class="snap fade">
+  <h2>Experience</h2>
+
+  <!-- ───── Draggable carousel wrapper ───── -->
+  <div class="exp-track" id="expTrack">
+    <!-- === CARD 1 : Insicloud === -->
     <article class="exp-card">
       <header>
         <h3>AI/ML Engineer <span>@ Insicloud</span></h3>
         <time>Jan 2025 – Present</time>
       </header>
-      <ul>
-        <li>Deployed OCR &amp; TTS micro-services (AWS Bedrock) ↓ turnaround 40%.</li>
-        <li>Executed 200+ manual test cases / sprint; defects tracked in Jira.</li>
-        <li>Automated 90% regression tests with Python + Playwright.</li>
+
+      <p>Shipped OCR & TTS micro-services (AWS Bedrock) ↓ 40 % turnaround and 90 % automated regression.</p>
+
+      <ul class="chips">
+        <li>Python</li><li>AWS</li><li>Flask</li><li>Playwright</li><li>Docker</li>
       </ul>
     </article>
+
+    <!-- === CARD 2 : VCU TA === -->
     <article class="exp-card">
       <header>
         <h3>Teaching Assistant <span>@ VCU CS Dept</span></h3>
         <time>Aug 2023 – Dec 2023</time>
       </header>
-      <ul>
-        <li>Guided students through Java programming assignments and theoretical concepts in computer science courses.</li>
-        <li>Conducted tutoring sessions, reviewed code, and provided constructive feedback on assignments.</li>
-        <li>Collaborated with faculty to develop teaching materials and improve student learning outcomes.</li>
+
+      <p>Ran labs & reviews for 60+ students; improved pass rate 15 % with code-clinic sessions.</p>
+
+      <ul class="chips">
+        <li>Java</li><li>Git</li><li>Mentoring</li>
       </ul>
     </article>
+
+    <!-- === CARD 3 : Bank of America === -->
     <article class="exp-card">
       <header>
-        <h3>Software Development Intern <span>@ Bank of America</span></h3>
+        <h3>Software Dev Intern <span>@ Bank of America</span></h3>
         <time>Mar 2022 – Oct 2022</time>
       </header>
-      <ul>
-        <li>Developed a cross-platform mobile app using React Native aimed at enhancing financial literacy for college students.</li>
-        <li>Led user research efforts and applied feedback to optimize the app's UI/UX and engagement.</li>
-        <li>Successfully deployed the application on both iOS and Android platforms.</li>
+
+      <p>Built React Native literacy app; added CI/CD (GitHub Actions) ↓ deploy time 50 %.</p>
+
+      <ul class="chips">
+        <li>React Native</li><li>Flask</li><li>SQLite</li><li>CI/CD</li>
       </ul>
     </article>
+
+    <!-- === CARD 4 : Capital One Capstone === -->
     <article class="exp-card">
       <header>
-        <h3>Capstone Project <span>@ Capital One</span></h3>
-        <time>Aug 2022 – Apr 2023</time>
+        <h3>ML Researcher <span>@ Capital One</span></h3>
+        <time>Sep 2022 – Apr 2023</time>
       </header>
-      <ul>
-        <li>Built a real-time cybersecurity event pipeline using AWS services and Datadog’s Vector for secure log processing.</li>
-        <li>Applied natural language processing (NLP) and Synthetic Data Vault to simulate and analyze potential security threats.</li>
-        <li>Collaborated with a multi-disciplinary team to deliver a production-ready solution for incident analysis.</li>
+
+      <p>Created real-time log pipeline (10 k events/s) ↑ incident visibility 40 %.</p>
+
+      <ul class="chips">
+        <li>AWS Lambda</li><li>Kinesis</li><li>SQL</li><li>NLP</li>
       </ul>
     </article>
-    <article class="exp-card">
-      <header>
-        <h3>Web Developer <span>@ VCU Social Good Project</span></h3>
-        <time>Aug 2022 – Dec 2022</time>
-      </header>
-      <ul>
-        <li>Worked with a team to design a JavaScript-based website aimed at improving night-time student transportation safety on campus.</li>
-        <li>Implemented features such as real-time bus tracking, user-friendly schedules, emergency alerts, and account security.</li>
-        <li>Focused on enhancing campus accessibility and safety through practical software solutions.</li>
-      </ul>
-    </article>
-    <article class="exp-card">
-      <header>
-        <h3>Peer Tutor <span>@ VCU CS Dept</span></h3>
-        <time>Aug 2021 – Dec 2021</time>
-      </header>
-      <ul>
-        <li>Assisted students with introductory Java programming labs, debugging, and foundational computer science concepts.</li>
-        <li>Held regular support sessions to guide students through their coursework and enhance their understanding of Java.</li>
-        <li>Strengthened personal programming skills while helping peers succeed academically.</li>
-      </ul>
-    </article>
-  </section>
+
+    <!-- add more cards as needed -->
+  </div>
+</section>
+
 
   <!-- ===== PROJECTS ===== -->
   <section id="projects" class="snap fade">
@@ -291,6 +287,14 @@
       <button type="submit">Send&nbsp;<i class="fas fa-paper-plane"></i></button>
     </form>
   </section>
+<script>
+document.getElementById('expTrack').addEventListener('mousedown', e=>{
+  const track=e.currentTarget; let startX=e.pageX, scroll=track.scrollLeft;
+  function move(ev){track.scrollLeft = scroll - (ev.pageX - startX);}
+  function stop(){window.removeEventListener('mousemove',move);window.removeEventListener('mouseup',stop);}
+  window.addEventListener('mousemove',move); window.addEventListener('mouseup',stop);
+});
+</script>
 
   <footer>
     © 2025&nbsp;Aneesh&nbsp;Mussim

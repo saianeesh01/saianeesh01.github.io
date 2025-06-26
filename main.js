@@ -72,28 +72,21 @@ document.querySelectorAll('.skill-logo').forEach(el=>{
   el.style.setProperty('--deg', pct * 3.6); // 100% -> 360deg
 });
 
-<script>
-document.getElementById("chatbot-toggle").addEventListener("click", () => {
-  document.getElementById("chatbot-modal").classList.toggle("hidden");
+// main.js  (put this in the repo root)
+document.addEventListener('DOMContentLoaded', () => {
+  const faders = document.querySelectorAll('.fade');
+
+  const io = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('show');
+          obs.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  faders.forEach(el => io.observe(el));
 });
-
-async function sendMessage() {
-  const input = document.getElementById('user-input');
-  const message = input.value.trim();
-  if (!message) return;
-
-  const chatBox = document.getElementById('chat-box');
-  chatBox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
-
-  const response = await fetch('https://aneesh-chatbot-backend.onrender.com/api/chat', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message })
-  });
-
-  const data = await response.json();
-  chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
-  chatBox.scrollTop = chatBox.scrollHeight;
-  input.value = '';
-}
-</script>

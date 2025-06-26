@@ -72,3 +72,28 @@ document.querySelectorAll('.skill-logo').forEach(el=>{
   el.style.setProperty('--deg', pct * 3.6); // 100% -> 360deg
 });
 
+<script>
+document.getElementById("chatbot-toggle").addEventListener("click", () => {
+  document.getElementById("chatbot-modal").classList.toggle("hidden");
+});
+
+async function sendMessage() {
+  const input = document.getElementById('user-input');
+  const message = input.value.trim();
+  if (!message) return;
+
+  const chatBox = document.getElementById('chat-box');
+  chatBox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+
+  const response = await fetch('https://aneesh-chatbot-backend.onrender.com/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message })
+  });
+
+  const data = await response.json();
+  chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
+  chatBox.scrollTop = chatBox.scrollHeight;
+  input.value = '';
+}
+</script>

@@ -2,18 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Aneesh Mussim | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aneesh Mussim - AI/ML Engineer and Full-Stack Developer Portfolio. Computer Science graduate specializing in artificial intelligence, machine learning, and cloud-native applications.">
+  <meta name="keywords" content="AI, ML, Machine Learning, Full Stack Developer, React, Python, Portfolio">
+  <meta name="author" content="Aneesh Mussim">
+  <title>Aneesh Mussim | AI/ML Engineer & Full-Stack Developer</title>
 
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" as="style">
+  <link rel="preload" href="assets/optimized/profile_circle.webp" as="image">
+  
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
-
   <!-- Styles & Script -->
   <link rel="stylesheet" href="style.css">
   <script defer src="main.js"></script>
 </head>
 <body>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader">
+      <div class="loader-ring"></div>
+      <div class="loader-text">Loading Portfolio...</div>
+    </div>
+  </div>
 
   <!-- ===== HERO ===== -->
   <header id="hero" class="snap">
@@ -21,13 +36,16 @@
       <span class="name-part red">Aneesh</span>
       <span class="name-part white">Mussim</span>
       <div class="profile-image-container">
-        <img src="assets/profile_circle.png" alt="Aneesh Mussim" class="profile-img">
+        <picture>
+          <source srcset="assets/optimized/profile_circle.webp" type="image/webp">
+          <img src="assets/profile_circle.png" alt="Aneesh Mussim - AI/ML Engineer" class="profile-img" loading="eager">
+        </picture>
         
         <div class="social-circle">
-          <a href="https://github.com/saianeesh01" target="_blank" class="icon icon1"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/aneesh-mussim" target="_blank" class="icon icon2"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:saianeesh01@gmail.com" class="icon icon3"><i class="fas fa-envelope"></i></a>
-          <a href="assets/Aneesh_Mussim_AI_Engineer_Resume.pdf" class="icon icon4" download title="Download Resume"><i class="fas fa-file-alt"></i></a>
+          <a href="https://github.com/saianeesh01" target="_blank" rel="noopener noreferrer" class="icon icon1" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/aneesh-mussim" target="_blank" rel="noopener noreferrer" class="icon icon2" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:saianeesh01@gmail.com" class="icon icon3" aria-label="Email Contact"><i class="fas fa-envelope"></i></a>
+          <a href="assets/Aneesh_Mussim_AI_Engineer_Resume.pdf" class="icon icon4" download title="Download Resume" aria-label="Download Resume"><i class="fas fa-file-alt"></i></a>
         </div>
       </div>
       
@@ -42,7 +60,7 @@
     <h2>About Me</h2>
     <p>
       I'm a Computer Science grad from VCU (Dec 2024) obsessed with AI/ML and building
-      end-to-end products. When I’m not coding you’ll find me lifting, hooping,
+      end-to-end products. When I'm not coding you'll find me lifting, hooping,
       or grinding through <em>Pokémon</em> runs.
     </p>
     <p class="highlight">Open to full-time AI/ML or software engineering roles.</p>
@@ -57,12 +75,12 @@
   <div class="skill-category">
     <h3>Languages</h3>
     <div class="skill-grid">
-      <div class="skill-logo" data-skill="85"><img src="assets/skills/python-original.svg"       alt="Python"><span class="skill-tooltip">Python&nbsp;85%</span></div>
-      <div class="skill-logo" data-skill="75"><img src="assets/skills/java-original.svg"         alt="Java"><span class="skill-tooltip">Java&nbsp;85%</span></div>
-      <div class="skill-logo" data-skill="80"><img src="assets/skills/javascript-original.svg"   alt="JavaScript"><span class="skill-tooltip">JavaScript&nbsp;75%</span></div>
-      <div class="skill-logo" data-skill="65"><img src="assets/skills/c-original.svg"            alt="C"><span class="skill-tooltip">C&nbsp;60%</span></div>
-      <div class="skill-logo" data-skill="60"><img src="assets/skills/csharp-original.svg"       alt="C#"><span class="skill-tooltip">C#&nbsp;65%</span></div>
-      <div class="skill-logo" data-skill="75"><img src="assets/skills/sqlite-original.svg"       alt="SQL"><span class="skill-tooltip">SQL&nbsp;80%</span></div>
+      <div class="skill-logo" data-skill="85"><img src="assets/skills/python-original.svg" alt="Python" loading="lazy"><span class="skill-tooltip">Python&nbsp;85%</span></div>
+      <div class="skill-logo" data-skill="75"><img src="assets/skills/java-original.svg" alt="Java" loading="lazy"><span class="skill-tooltip">Java&nbsp;85%</span></div>
+      <div class="skill-logo" data-skill="80"><img src="assets/skills/javascript-original.svg" alt="JavaScript" loading="lazy"><span class="skill-tooltip">JavaScript&nbsp;75%</span></div>
+      <div class="skill-logo" data-skill="65"><img src="assets/skills/c-original.svg" alt="C" loading="lazy"><span class="skill-tooltip">C&nbsp;60%</span></div>
+      <div class="skill-logo" data-skill="60"><img src="assets/skills/csharp-original.svg" alt="C#" loading="lazy"><span class="skill-tooltip">C#&nbsp;65%</span></div>
+      <div class="skill-logo" data-skill="75"><img src="assets/skills/sqlite-original.svg" alt="SQL" loading="lazy"><span class="skill-tooltip">SQL&nbsp;80%</span></div>
     </div>
   </div>
 
@@ -70,15 +88,15 @@
   <div class="skill-category">
     <h3>Frameworks&nbsp;&amp;&nbsp;Tools</h3>
     <div class="skill-grid">
-      <div class="skill-logo" data-skill="80"><img src="assets/skills/react-original.svg"        alt="React"><span class="skill-tooltip">React&nbsp;75%</span></div>
-      <div class="skill-logo" data-skill="78"><img src="assets/skills/react-original.svg"        alt="React Native"><span class="skill-tooltip">React&nbsp;Native&nbsp;70%</span></div>
-      <div class="skill-logo" data-skill="55"><img src="assets/skills/angular-framework-logo-red-white-shield-icon-modern-design-1.png"               alt="Angular"><span class="skill-tooltip">Angular&nbsp;55%</span></div>
-      <div class="skill-logo" data-skill="78"><img src="assets/skills/flask.png"        alt="Flask"><span class="skill-tooltip">Flask&nbsp;78%</span></div>
-      <div class="skill-logo" data-skill="75"><img src="assets/skills/docker-original.svg"       alt="Docker"><span class="skill-tooltip">Docker&nbsp;65%</span></div>
-      <div class="skill-logo" data-skill="65"><img src="assets/skills/unity-original.svg"        alt="Unity"><span class="skill-tooltip">Unity&nbsp;45%</span></div>
-      <div class="skill-logo" data-skill="85"><img src="assets/skills/git-original.svg"          alt="Git"><span class="skill-tooltip">Git&nbsp;85%</span></div>
-      <div class="skill-logo" data-skill="70"><img src="assets/skills/github-original.svg"       alt="GitHub Actions"><span class="skill-tooltip">GitHub&nbsp;Actions&nbsp;85%</span></div>
-      <div class="skill-logo" data-skill="55"><img src="assets/skills/grpc-logo-png_seeklogo-430953.png"                  alt="gRPC"><span class="skill-tooltip">gRPC&nbsp;45%</span></div>
+      <div class="skill-logo" data-skill="80"><img src="assets/skills/react-original.svg" alt="React" loading="lazy"><span class="skill-tooltip">React&nbsp;75%</span></div>
+      <div class="skill-logo" data-skill="78"><img src="assets/skills/react-original.svg" alt="React Native" loading="lazy"><span class="skill-tooltip">React&nbsp;Native&nbsp;70%</span></div>
+      <div class="skill-logo" data-skill="55"><img src="assets/skills/angular-framework-logo-red-white-shield-icon-modern-design-1.png" alt="Angular" loading="lazy"><span class="skill-tooltip">Angular&nbsp;55%</span></div>
+      <div class="skill-logo" data-skill="78"><img src="assets/skills/flask.png" alt="Flask" loading="lazy"><span class="skill-tooltip">Flask&nbsp;78%</span></div>
+      <div class="skill-logo" data-skill="75"><img src="assets/skills/docker-original.svg" alt="Docker" loading="lazy"><span class="skill-tooltip">Docker&nbsp;65%</span></div>
+      <div class="skill-logo" data-skill="65"><img src="assets/skills/unity-original.svg" alt="Unity" loading="lazy"><span class="skill-tooltip">Unity&nbsp;45%</span></div>
+      <div class="skill-logo" data-skill="85"><img src="assets/skills/git-original.svg" alt="Git" loading="lazy"><span class="skill-tooltip">Git&nbsp;85%</span></div>
+      <div class="skill-logo" data-skill="70"><img src="assets/skills/github-original.svg" alt="GitHub Actions" loading="lazy"><span class="skill-tooltip">GitHub&nbsp;Actions&nbsp;85%</span></div>
+      <div class="skill-logo" data-skill="55"><img src="assets/skills/grpc-logo-png_seeklogo-430953.png" alt="gRPC" loading="lazy"><span class="skill-tooltip">gRPC&nbsp;45%</span></div>
     </div>
   </div>
 
@@ -86,11 +104,11 @@
   <div class="skill-category">
     <h3>Cloud&nbsp;&amp;&nbsp;Databases</h3>
     <div class="skill-grid">
-      <div class="skill-logo" data-skill="75"><img src="assets/skills/Amazon-Web-Services-AWS-Logo.png"             alt="AWS"><span class="skill-tooltip">AWS&nbsp;75%</span></div>
-      <div class="skill-logo" data-skill="65"><img src="assets/skills/firebase-plain.svg"        alt="Firebase"><span class="skill-tooltip">Firebase&nbsp;55%</span></div>
-      <div class="skill-logo" data-skill="80"><img src="assets/skills/mysql-original.svg"        alt="MySQL"><span class="skill-tooltip">MySQL&nbsp;80%</span></div>
-      <div class="skill-logo" data-skill="70"><img src="assets/skills/postgresql-original.svg"   alt="PostgreSQL"><span class="skill-tooltip">PostgreSQL&nbsp;70%</span></div>
-      <div class="skill-logo" data-skill="70"><img src="assets/skills/sqlite-original.svg"       alt="SQLite"><span class="skill-tooltip">SQLite&nbsp;70%</span></div>
+      <div class="skill-logo" data-skill="75"><img src="assets/skills/Amazon-Web-Services-AWS-Logo.png" alt="AWS" loading="lazy"><span class="skill-tooltip">AWS&nbsp;75%</span></div>
+      <div class="skill-logo" data-skill="65"><img src="assets/skills/firebase-plain.svg" alt="Firebase" loading="lazy"><span class="skill-tooltip">Firebase&nbsp;55%</span></div>
+      <div class="skill-logo" data-skill="80"><img src="assets/skills/mysql-original.svg" alt="MySQL" loading="lazy"><span class="skill-tooltip">MySQL&nbsp;80%</span></div>
+      <div class="skill-logo" data-skill="70"><img src="assets/skills/postgresql-original.svg" alt="PostgreSQL" loading="lazy"><span class="skill-tooltip">PostgreSQL&nbsp;70%</span></div>
+      <div class="skill-logo" data-skill="70"><img src="assets/skills/sqlite-original.svg" alt="SQLite" loading="lazy"><span class="skill-tooltip">SQLite&nbsp;70%</span></div>
     </div>
   </div>
 
@@ -98,13 +116,13 @@
   <div class="skill-category">
     <h3>AI&nbsp;/&nbsp;ML</h3>
     <div class="skill-grid">
-      <div class="skill-logo" data-skill="70"><img src="assets/skills/langchain.png"             alt="LangChain"><span class="skill-tooltip">LangChain&nbsp;70%</span></div>
-      <div class="skill-logo" data-skill="65"><img src="assets/skills/ollama-logo-png_seeklogo-593420.png"                alt="Ollama"><span class="skill-tooltip">Ollama&nbsp;70%</span></div>
-      <div class="skill-logo" data-skill="60"><img src="assets/skills/tensorflow-original.svg"   alt="TensorFlow"><span class="skill-tooltip">TensorFlow&nbsp;72%</span></div>
-      <div class="skill-logo" data-skill="70"><img src="assets/skills/scikitlearn-original.svg"  alt="scikit-learn"><span class="skill-tooltip">scikit-learn&nbsp;66%</span></div>
-      <div class="skill-logo" data-skill="60"><img src="assets/skills/FAISS.png"                 alt="FAISS"><span class="skill-tooltip">FAISS&nbsp;65%</span></div>
-      <div class="skill-logo" data-skill="75"><img src="assets/skills/huggingface-color.png"           alt="HuggingFace"><span class="skill-tooltip">HuggingFace&nbsp;40%</span></div>
-      <div class="skill-logo" data-skill="65"><img src="assets/skills/Sagemaker.png"             alt="SageMaker"><span class="skill-tooltip">SageMaker&nbsp;70%</span></div>
+      <div class="skill-logo" data-skill="70"><img src="assets/skills/langchain.png" alt="LangChain" loading="lazy"><span class="skill-tooltip">LangChain&nbsp;70%</span></div>
+      <div class="skill-logo" data-skill="65"><img src="assets/skills/ollama-logo-png_seeklogo-593420.png" alt="Ollama" loading="lazy"><span class="skill-tooltip">Ollama&nbsp;70%</span></div>
+      <div class="skill-logo" data-skill="60"><img src="assets/skills/tensorflow-original.svg" alt="TensorFlow" loading="lazy"><span class="skill-tooltip">TensorFlow&nbsp;72%</span></div>
+      <div class="skill-logo" data-skill="70"><img src="assets/skills/scikitlearn-original.svg" alt="scikit-learn" loading="lazy"><span class="skill-tooltip">scikit-learn&nbsp;66%</span></div>
+      <div class="skill-logo" data-skill="60"><img src="assets/skills/FAISS.png" alt="FAISS" loading="lazy"><span class="skill-tooltip">FAISS&nbsp;65%</span></div>
+      <div class="skill-logo" data-skill="75"><img src="assets/skills/huggingface-color.png" alt="HuggingFace" loading="lazy"><span class="skill-tooltip">HuggingFace&nbsp;40%</span></div>
+      <div class="skill-logo" data-skill="65"><img src="assets/skills/Sagemaker.png" alt="SageMaker" loading="lazy"><span class="skill-tooltip">SageMaker&nbsp;70%</span></div>
     </div>
   </div>
 
@@ -136,13 +154,13 @@
   <p>OCR & TTS micro-services (AWS Bedrock) down 40 % turnaround.</p>
 
   <ul class="chips">
-  <li><img src="assets/skills/python-original.svg"  alt="">Python</li>
-  <li><img src="assets/skills/amazon-bedrock-logo-grayscale-caee.png"          alt="">Bedrock</li>
-  <li><img src="assets/skills/flask.png"            alt="">Flask</li>
-  <li><img src="assets/skills/react-original.svg"            alt="">React</li>
-  <li><img src="assets/skills/ollama-logo-png_seeklogo-593420.png"           alt="">Ollama</li>
-  <li><img src="assets/skills/langchain.png"        alt="">LangChain</li>
-  <li><img src="assets/skills/docker-original.svg"  alt="">Docker</li>
+  <li><img src="assets/skills/python-original.svg" alt="" loading="lazy">Python</li>
+  <li><img src="assets/skills/amazon-bedrock-logo-grayscale-caee.png" alt="" loading="lazy">Bedrock</li>
+  <li><img src="assets/skills/flask.png" alt="" loading="lazy">Flask</li>
+  <li><img src="assets/skills/react-original.svg" alt="" loading="lazy">React</li>
+  <li><img src="assets/skills/ollama-logo-png_seeklogo-593420.png" alt="" loading="lazy">Ollama</li>
+  <li><img src="assets/skills/langchain.png" alt="" loading="lazy">LangChain</li>
+  <li><img src="assets/skills/docker-original.svg" alt="" loading="lazy">Docker</li>
 </ul>
 </article>
 
@@ -155,12 +173,12 @@
       </header>
       <p>Real-time log pipeline (10 K ev/s) up 40 % incident visibility; synthetic threats down 25 % FPs.</p>
       <ul class="chips">
-  <li><img src="assets/skills/aws-lambda-1.svg"     alt="">AWS Lambda</li>
-  <li><img src="assets/skills/aws-kinesis-logo-png_seeklogo-306153.png"    alt="">Kinesis</li>
-  <li><img src="assets/skills/mysql-original.svg"            alt="">SQL</li>
-  <li><img src="assets/skills/nlp-natural-language-processing.png"            alt="">NLP</li>
-  <li><img src="assets/skills/datadog-1.svg"        alt="">Vector</li>
-  <li><img src="assets/skills/raspberry-pi-logo.svg"   alt="">Raspberry Pi</li>
+  <li><img src="assets/skills/aws-lambda-1.svg" alt="" loading="lazy">AWS Lambda</li>
+  <li><img src="assets/skills/aws-kinesis-logo-png_seeklogo-306153.png" alt="" loading="lazy">Kinesis</li>
+  <li><img src="assets/skills/mysql-original.svg" alt="" loading="lazy">SQL</li>
+  <li><img src="assets/skills/nlp-natural-language-processing.png" alt="" loading="lazy">NLP</li>
+  <li><img src="assets/skills/datadog-1.svg" alt="" loading="lazy">Vector</li>
+  <li><img src="assets/skills/raspberry-pi-logo.svg" alt="" loading="lazy">Raspberry Pi</li>
 </ul>
 
     </article>
@@ -173,9 +191,9 @@
       </header>
       <p>Led Java labs & code clinics; improved pass rate 15 %.</p>
       <ul class="chips">
-  <li><img src="assets/skills/java-original.svg" alt="">Java</li>
-  <li><img src="assets/skills/mentoring.svg"      alt="">Mentoring</li>
-  <li><img src="assets/skills/git-original.svg"   alt="">Git</li>
+  <li><img src="assets/skills/java-original.svg" alt="" loading="lazy">Java</li>
+  <li><img src="assets/skills/mentoring.svg" alt="" loading="lazy">Mentoring</li>
+  <li><img src="assets/skills/git-original.svg" alt="" loading="lazy">Git</li>
 </ul>
 
     </article>
@@ -188,12 +206,12 @@
       </header>
       <p>React Native literacy app; CI/CD (GitHub Actions) down 50 % deploy time.</p>
       <ul class="chips">
-  <li><img src="assets/skills/react-original.svg"          alt="">React Native</li>
-  <li><img src="assets/skills/flask.png"          alt="">Flask</li>
-  <li><img src="assets/skills/sqlite-original.svg"alt="">SQLite</li>
-  <li><img src="assets/skills/github-original.svg"alt="">CI/CD</li>
-  <li><img src="assets/skills/figma.svg"          alt="">Figma</li>
-  <li><img src="assets/skills/usertest.svg"       alt="">User Testing</li>
+  <li><img src="assets/skills/react-original.svg" alt="" loading="lazy">React Native</li>
+  <li><img src="assets/skills/flask.png" alt="" loading="lazy">Flask</li>
+  <li><img src="assets/skills/sqlite-original.svg" alt="" loading="lazy">SQLite</li>
+  <li><img src="assets/skills/github-original.svg" alt="" loading="lazy">CI/CD</li>
+  <li><img src="assets/skills/figma.svg" alt="" loading="lazy">Figma</li>
+  <li><img src="assets/skills/usertest.svg" alt="" loading="lazy">User Testing</li>
 </ul>
     </article>
 
@@ -205,11 +223,11 @@
       </header>
       <p>JavaScript site for safe night transport; added real-time bus tracking & alerts.</p>
       <ul class="chips">
-  <li><img src="assets/skills/javascript-original.svg" alt="">JavaScript</li>
-  <li><img src="assets/skills/react-original.svg"               alt="">React</li>
-  <li><img src="assets/skills/flask.png"               alt="">Flask</li>
-  <li><img src="assets/skills/rest.svg"                alt="">REST API</li>
-  <li><img src="assets/skills/uiux.svg"                alt="">UI/UX</li>
+  <li><img src="assets/skills/javascript-original.svg" alt="" loading="lazy">JavaScript</li>
+  <li><img src="assets/skills/react-original.svg" alt="" loading="lazy">React</li>
+  <li><img src="assets/skills/flask.png" alt="" loading="lazy">Flask</li>
+  <li><img src="assets/skills/rest.svg" alt="" loading="lazy">REST API</li>
+  <li><img src="assets/skills/uiux.svg" alt="" loading="lazy">UI/UX</li>
 </ul>
     </article>
 
@@ -221,9 +239,9 @@
       </header>
       <p>Taught introductory Java; ran weekly support sessions, boosting grades & confidence.</p>
       <ul class="chips">
-  <li><img src="assets/skills/java-original.svg" alt="">Java</li>
-  <li><img src="assets/skills/teaching.svg"      alt="">Teaching</li>
-  <li><img src="assets/skills/debug.svg"         alt="">Debugging</li>
+  <li><img src="assets/skills/java-original.svg" alt="" loading="lazy">Java</li>
+  <li><img src="assets/skills/teaching.svg" alt="" loading="lazy">Teaching</li>
+  <li><img src="assets/skills/debug.svg" alt="" loading="lazy">Debugging</li>
 </ul>
 
     </article>
@@ -237,7 +255,10 @@
     <h2>Projects</h2>
     <div class="proj-grid">
       <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/proposal_scanner_prototype','_blank')">
-        <img src="assets/placeholder_court_proposal_scanne.png" alt="Proposal Scanner">
+        <picture>
+          <source srcset="assets/optimized/placeholder_court_proposal_scanne.webp" type="image/webp">
+          <img src="assets/placeholder_court_proposal_scanne.png" alt="Proposal Scanner" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Proposal Scanner Prototype</h3>
           <p>AI-powered document scanner using OCR, AWS Textract, FAISS, and LLM summarization for hybrid structured/unstructured document analysis. Supports S3/local, highlights fields, and logs scan history.</p>
@@ -245,7 +266,10 @@
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
       <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/solo-leveling-task-app','_blank')">
-        <img src="assets/placeholder_solo_leveling_task_app.png" alt="Solo Leveling Task App">
+        <picture>
+          <source srcset="assets/optimized/placeholder_solo_leveling_task_app.webp" type="image/webp">
+          <img src="assets/placeholder_solo_leveling_task_app.png" alt="Solo Leveling Task App" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Solo Leveling Task App</h3>
           <p>Gamified productivity app with React Native/Flask, daily AI-generated quests, XP/streak tracking, and LangChain+Ollama quest suggestions. Animated UI, streak rewards, and local persistence.</p>
@@ -253,7 +277,10 @@
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
       <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/court-deadline-tracker','_blank')">
-        <img src="assets/placeholder_court_deadline_tracker.png" alt="Court Deadline Tracker">
+        <picture>
+          <source srcset="assets/optimized/placeholder_court_deadline_tracker.webp" type="image/webp">
+          <img src="assets/placeholder_court_deadline_tracker.png" alt="Court Deadline Tracker" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Court Deadline Tracker</h3>
           <p>Legal productivity tool (Flask/React) for attorneys to track/manage court deadlines with natural language input, Google Calendar sync, NER/AI parsing, and real-time alerts.</p>
@@ -261,7 +288,10 @@
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
       <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/Pomodoro','_blank')">
-        <img src="assets/pomodoro_timer.png" alt="Pomodoro Timer">
+        <picture>
+          <source srcset="assets/optimized/pomodoro_timer.webp" type="image/webp">
+          <img src="assets/pomodoro_timer.png" alt="Pomodoro Timer" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Pomodoro Timer with Motivation</h3>
           <p>React/Flask Pomodoro timer with animated running character, motivational texts, and creative UI/UX for productivity and focus.</p>
@@ -269,7 +299,10 @@
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
       <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/Clothing-assistant','_blank')">
-        <img src="assets/placeholder_clothing_consulting_robot.png" alt="Clothing Consulting Robot">
+        <picture>
+          <source srcset="assets/optimized/placeholder_clothing_consulting_robot.webp" type="image/webp">
+          <img src="assets/placeholder_clothing_consulting_robot.png" alt="Clothing Consulting Robot" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Clothing Consulting Robot</h3>
           <p>UiPath/web automation system for weather-based clothing suggestions. Scrapes real-time weather and suggests attire using logic and automation.</p>
@@ -277,7 +310,10 @@
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
       <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/PR-Tracker','_blank')">
-        <img src="assets/placeholder_fitness.png" alt="Fitness Tracker App">
+        <picture>
+          <source srcset="assets/optimized/placeholder_fitness.webp" type="image/webp">
+          <img src="assets/placeholder_fitness.png" alt="Fitness Tracker App" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Fitness Tracker App</h3>
           <p>Full-stack fitness tracking app (React/Flask/MySQL) with RESTful APIs, dynamic dashboard, and Dockerized deployment for scalability.</p>
@@ -285,7 +321,10 @@
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
       <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/VideoGameStore','_blank')">
-        <img src="assets/placeholder_videogamestore.png" alt="Video Game Store Web Application">
+        <picture>
+          <source srcset="assets/optimized/placeholder_videogamestore.webp" type="image/webp">
+          <img src="assets/placeholder_videogamestore.png" alt="Video Game Store Web Application" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Video Game Store Web Application</h3>
           <p>Full-stack eCommerce platform (HTML/CSS/JS, PHP/MySQL) for browsing, purchasing, and reviewing games. Responsive design, Dockerized, and version controlled.</p>
@@ -293,7 +332,10 @@
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
       <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/venom-run','_blank')">
-        <img src="assets/venom_running.png" alt="Venom Run">
+        <picture>
+          <source srcset="assets/optimized/venom_running.webp" type="image/webp">
+          <img src="assets/venom_running.png" alt="Venom Run" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Venom Run</h3>
           <p>Unity/C# endless runner with symbiote theme, tight movement, reactive enemies, and layered parallax backgrounds. Creative deep dive into fast-paced level design.</p>
@@ -301,7 +343,10 @@
         <span class="hover-msg">Click to Play</span>
       </div>
       <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/pro','_blank')">
-        <img src="assets/projectiles_placeholder.png" alt="Projectiles">
+        <picture>
+          <source srcset="assets/optimized/projectiles_placeholder.webp" type="image/webp">
+          <img src="assets/projectiles_placeholder.png" alt="Projectiles" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Projectiles</h3>
           <p>2D sprite-based fighting game (Unity/C#) with pop culture characters, animated attacks, and arcade-style combat systems.</p>
@@ -309,7 +354,10 @@
         <span class="hover-msg">Click to Play</span>
       </div>
       <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/flash-run-2','_blank')">
-        <img src="assets/flash_run2_placeholder .png" alt="Flash Run 2">
+        <picture>
+          <source srcset="assets/optimized/flash_run2_placeholder .webp" type="image/webp">
+          <img src="assets/flash_run2_placeholder .png" alt="Flash Run 2" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Flash Run 2</h3>
           <p>Sequel to Flash Run: smoother animations, smarter enemies, cinematic VFX, and progressive difficulty. Optimized C# scripts and frame-perfect transitions.</p>
@@ -317,7 +365,10 @@
         <span class="hover-msg">Click to Play</span>
       </div>
       <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/flash-run','_blank')">
-        <img src="assets/flash_run_placeholder.png" alt="Flash Run">
+        <picture>
+          <source srcset="assets/optimized/flash_run_placeholder.webp" type="image/webp">
+          <img src="assets/flash_run_placeholder.png" alt="Flash Run" loading="lazy">
+        </picture>
         <div class="proj-info">
           <h3>Flash Run</h3>
           <p>My first programming project: 2D endless runner (Unity/C#) inspired by The Flash and Mega Man. Hand-animated sprites, hit detection, and game logic.</p>
@@ -327,6 +378,29 @@
     </div>
   </section>
 
+  <!-- ===== ENHANCED CHATBOT SECTION ===== -->
+  <section id="chatbot" class="snap fade">
+    <h2>Ask My AI Assistant</h2>
+    <div class="chat-container">
+      <div id="chat-box" class="chat-box">
+        <div class="welcome-message">
+          <i class="fas fa-robot"></i>
+          <p>Hi! I'm Aneesh's AI assistant. Ask me anything about his projects, skills, or experience!</p>
+        </div>
+      </div>
+      <div class="chat-input-container">
+        <input type="text" id="user-input" placeholder="Ask me about Aneesh's experience, projects, or skills..." />
+        <button onclick="sendMessage()" id="send-btn">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+      <div class="typing-indicator" id="typing-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </section>
 
 <script>
 document.getElementById('expTrack').addEventListener('mousedown', e=>{
@@ -335,37 +409,62 @@ document.getElementById('expTrack').addEventListener('mousedown', e=>{
   function stop(){window.removeEventListener('mousemove',move);window.removeEventListener('mouseup',stop);}
   window.addEventListener('mousemove',move); window.addEventListener('mouseup',stop);
 });
-</script>
-<section id="chatbot">
-  <h2>Ask My AI Chatbot</h2>
-  <div id="chat-box"></div>
-  <input type="text" id="user-input" placeholder="Ask me anything..." />
-  <button onclick="sendMessage()">Send</button>
-</section>
 
-<script>
+// Enhanced chatbot functionality
 async function sendMessage() {
   const input = document.getElementById('user-input');
-  const message = input.value;
+  const sendBtn = document.getElementById('send-btn');
+  const typingIndicator = document.getElementById('typing-indicator');
+  const message = input.value.trim();
+  
   if (!message) return;
 
-  const response = await fetch('https://aneesh-chatbot-backend.onrender.com/api/chat', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message })
-  });
-
-  const data = await response.json();
   const chatBox = document.getElementById('chat-box');
-  chatBox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
-  chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
+  
+  // Add user message
+  chatBox.innerHTML += `<div class="message user-message"><strong>You:</strong> ${message}</div>`;
   input.value = '';
+  sendBtn.disabled = true;
+  
+  // Show typing indicator
+  typingIndicator.style.display = 'block';
+  chatBox.scrollTop = chatBox.scrollHeight;
+
+  try {
+    const response = await fetch('https://aneesh-chatbot-backend.onrender.com/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message })
+    });
+
+    const data = await response.json();
+    
+    // Hide typing indicator
+    typingIndicator.style.display = 'none';
+    
+    // Add bot response
+    chatBox.innerHTML += `<div class="message bot-message"><strong><i class="fas fa-robot"></i> Assistant:</strong> ${data.response}</div>`;
+    
+  } catch (error) {
+    typingIndicator.style.display = 'none';
+    chatBox.innerHTML += `<div class="message error-message"><strong>Error:</strong> Sorry, I'm having trouble connecting right now. Please try again later.</div>`;
+  }
+  
+  sendBtn.disabled = false;
+  chatBox.scrollTop = chatBox.scrollHeight;
 }
+
+// Allow Enter key to send message
+document.getElementById('user-input').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    sendMessage();
+  }
+});
 </script>
 
   <footer>
     © 2025&nbsp;Aneesh&nbsp;Mussim
-    <a href="#hero" class="backtotop"><i class="fas fa-arrow-up"></i></a>
+    <a href="#hero" class="backtotop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
   </footer>
 </body>
 </html>

@@ -237,3 +237,31 @@ footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:rel
 .user-msg, .bot-msg {
   margin: 5px 0;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .profile-image {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .section {
+    padding: 1rem 0;
+  }
+
+  h1, h2, p {
+    text-align: center;
+  }
+}
+

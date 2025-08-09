@@ -117,26 +117,51 @@ document.addEventListener('DOMContentLoaded', () => {
         easing: 'easeOutBack'
       }, '-=400')
       .add({
-        targets: '.social-circle .icon',
-        scale: [0, 1],
-        opacity: [0, 1],
-        delay: window.anime.stagger(90),
-        duration: 420,
-        easing: 'easeOutBack'
+        targets: '.jarvis-ring',
+        opacity: [0, 0.6],
+        scale: [0.92, 1],
+        duration: 600,
+        easing: 'easeOutCubic'
       }, '-=350');
 
-    // ===== SVG stroke draw for hero title =====
-    const strokeRect = document.getElementById('hero-stroke-mask-rect');
-    const svg = document.querySelector('.hero-stroke-svg');
-    if (strokeRect && svg) {
-      const totalW = svg.getBoundingClientRect().width;
-      strokeRect.setAttribute('width', 0);
-      window.anime({
-        targets: strokeRect,
-        width: totalW,
-        duration: 1600,
-        delay: 150,
-        easing: 'easeInOutSine'
+    // ===== Jarvis orbit icons on hover =====
+    const social = document.querySelector('.social-circle');
+    const container = document.querySelector('.profile-image-container');
+    if (social && container) {
+      const icons = Array.from(social.querySelectorAll('.icon'));
+      const placeIcons = (r = 120) => {
+        icons.forEach((el, idx) => {
+          const angle = (idx / icons.length) * Math.PI * 2 - Math.PI / 2; // start top
+          const x = Math.cos(angle) * r;
+          const y = Math.sin(angle) * r;
+          el.dataset.tx = x;
+          el.dataset.ty = y;
+        });
+      };
+      placeIcons(100);
+
+      container.addEventListener('mouseenter', () => {
+        window.anime({
+          targets: icons,
+          opacity: 1,
+          scale: 1,
+          translateX: el => el.dataset.tx,
+          translateY: el => el.dataset.ty,
+          delay: window.anime.stagger(70),
+          duration: 520,
+          easing: 'easeOutBack'
+        });
+      });
+      container.addEventListener('mouseleave', () => {
+        window.anime({
+          targets: icons,
+          opacity: 0,
+          scale: 0.6,
+          translateX: 0,
+          translateY: 0,
+          duration: 320,
+          easing: 'easeOutCubic'
+        });
       });
     }
 

@@ -94,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReduced) {
     document.querySelectorAll('.fade').forEach(el => el.classList.add('show'));
-    return;
   }
 
   // ===== Hero entrance timeline =====
@@ -140,29 +139,54 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       placeIcons(100);
 
-      container.addEventListener('mouseenter', () => {
-        window.anime({
-          targets: icons,
-          opacity: 1,
-          scale: 1,
-          translateX: el => el.dataset.tx,
-          translateY: el => el.dataset.ty,
-          delay: window.anime.stagger(70),
-          duration: 520,
-          easing: 'easeOutBack'
-        });
-      });
-      container.addEventListener('mouseleave', () => {
-        window.anime({
-          targets: icons,
-          opacity: 0,
-          scale: 0.6,
-          translateX: 0,
-          translateY: 0,
-          duration: 320,
-          easing: 'easeOutCubic'
-        });
-      });
+      const hasHover = !window.matchMedia || !window.matchMedia('(hover: none)').matches;
+
+      const reveal = () => {
+        if (window.anime && !prefersReduced) {
+          window.anime({
+            targets: icons,
+            opacity: 1,
+            scale: 1,
+            translateX: el => el.dataset.tx,
+            translateY: el => el.dataset.ty,
+            delay: window.anime.stagger(70),
+            duration: 520,
+            easing: 'easeOutBack'
+          });
+        } else {
+          icons.forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = `translate(${el.dataset.tx}px, ${el.dataset.ty}px) scale(1)`;
+          });
+        }
+      };
+
+      const retract = () => {
+        if (window.anime && !prefersReduced) {
+          window.anime({
+            targets: icons,
+            opacity: 0,
+            scale: 0.6,
+            translateX: 0,
+            translateY: 0,
+            duration: 320,
+            easing: 'easeOutCubic'
+          });
+        } else {
+          icons.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translate(0,0) scale(.6)';
+          });
+        }
+      };
+
+      if (hasHover) {
+        container.addEventListener('mouseenter', reveal);
+        container.addEventListener('mouseleave', retract);
+      } else {
+        // Touch devices: show positioned icons by default
+        reveal();
+      }
     }
 
     // ===== Skill rings fill on scroll =====

@@ -135,6 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
           const y = Math.sin(angle) * r;
           el.dataset.tx = x;
           el.dataset.ty = y;
+          // write CSS vars for fallback
+          el.style.setProperty('--tx', `${x}px`);
+          el.style.setProperty('--ty', `${y}px`);
         });
       };
       placeIcons(100);
@@ -142,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const hasHover = !window.matchMedia || !window.matchMedia('(hover: none)').matches;
 
       const reveal = () => {
+        container.classList.add('icons-shown');
         if (window.anime && !prefersReduced) {
           window.anime({
             targets: icons,
@@ -162,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       const retract = () => {
+        container.classList.remove('icons-shown');
         if (window.anime && !prefersReduced) {
           window.anime({
             targets: icons,

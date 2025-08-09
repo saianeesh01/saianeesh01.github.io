@@ -125,6 +125,21 @@ document.addEventListener('DOMContentLoaded', () => {
         easing: 'easeOutBack'
       }, '-=350');
 
+    // ===== SVG stroke draw for hero title =====
+    const strokeRect = document.getElementById('hero-stroke-mask-rect');
+    const svg = document.querySelector('.hero-stroke-svg');
+    if (strokeRect && svg) {
+      const totalW = svg.getBoundingClientRect().width;
+      strokeRect.setAttribute('width', 0);
+      window.anime({
+        targets: strokeRect,
+        width: totalW,
+        duration: 1600,
+        delay: 150,
+        easing: 'easeInOutSine'
+      });
+    }
+
     // ===== Skill rings fill on scroll =====
     const skillObserver = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
@@ -188,6 +203,75 @@ document.addEventListener('DOMContentLoaded', () => {
           window.anime({ targets: card, scale: 1, duration: 220, easing: 'easeOutQuad' });
         }, 0);
       });
+
+      // Slide-up info on hover via anime for extra smoothness
+      const info = card.querySelector('.proj-info');
+      card.addEventListener('mouseenter', () => {
+        if (!info) return;
+        window.anime({ targets: info, translateY: [16, 0], opacity: [0.85, 1], duration: 260, easing: 'easeOutCubic' });
+      });
+      card.addEventListener('mouseleave', () => {
+        if (!info) return;
+        window.anime({ targets: info, translateY: 16, opacity: 0.9, duration: 220, easing: 'easeOutCubic' });
+      });
     });
+
+    // ===== Scroll progress bar =====
+    const progressEl = document.querySelector('.scroll-progress__bar');
+    const updateProgress = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      window.anime({ targets: progressEl, width: `${pct}%`, duration: 120, easing: 'linear' });
+    };
+    if (progressEl) {
+      updateProgress();
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress);
+    }
+
+    // ===== Resume click confetti =====
+    const resumeLink = document.querySelector('.icon4');
+    if (resumeLink) {
+      resumeLink.addEventListener('click', (e) => {
+        const rect = resumeLink.getBoundingClientRect();
+        const originX = rect.left + rect.width / 2 + window.scrollX;
+        const originY = rect.top + rect.height / 2 + window.scrollY;
+
+        const particles = Array.from({ length: 26 }).map(() => {
+          const el = document.createElement('span');
+          el.className = 'confetti';
+          document.body.appendChild(el);
+          return el;
+        });
+
+        particles.forEach((p, i) => {
+          const angle = (i / particles.length) * Math.PI * 2;
+          const radius = 60 + Math.random() * 40;
+          const tx = originX + Math.cos(angle) * radius;
+          const ty = originY + Math.sin(angle) * radius;
+          p.style.position = 'absolute';
+          p.style.left = `${originX}px`;
+          p.style.top = `${originY}px`;
+          p.style.width = '6px';
+          p.style.height = '6px';
+          p.style.borderRadius = '2px';
+          p.style.background = ['#FF0033','#ff9aa2','#ff5e7a','#ffffff'][i % 4];
+          p.style.pointerEvents = 'none';
+
+          window.anime({
+            targets: p,
+            translateX: tx - originX,
+            translateY: ty - originY - (Math.random()*40),
+            rotate: Math.random()*360,
+            opacity: [{ value: 1, duration: 0 }, { value: 0, duration: 700, delay: 250 }],
+            scale: [{ value: 1, duration: 0 }, { value: 0.8, duration: 700 }],
+            duration: 800,
+            easing: 'easeOutCubic',
+            complete: () => p.remove()
+          });
+        });
+      });
+    }
   }
 });

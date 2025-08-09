@@ -17,12 +17,21 @@
   <script defer src="main.js"></script>
 </head>
 <body>
+  <div id="scroll-progress"><div class="scroll-progress__bar"></div></div>
 
   <!-- ===== HERO ===== -->
   <header id="hero" class="snap">
     <div class="hero-inner">
       <span class="name-part red">Aneesh</span>
       <span class="name-part white">Mussim</span>
+      <svg class="hero-stroke-svg" viewBox="0 0 1000 160" aria-hidden="true">
+        <defs>
+          <mask id="hero-stroke-mask">
+            <rect id="hero-stroke-mask-rect" x="0" y="0" width="0" height="160" fill="#fff"></rect>
+          </mask>
+        </defs>
+        <text x="500" y="90" text-anchor="middle" class="hero-stroke-text" mask="url(#hero-stroke-mask)">Aneesh Mussim</text>
+      </svg>
       <div class="profile-image-container">
         <img src="assets/profile_circle.png" alt="Aneesh Mussim" class="profile-img">
         

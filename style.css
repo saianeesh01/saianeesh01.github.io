@@ -3,6 +3,7 @@
   --bg:#0A0A0A;
   --fg:#F0F0F0;
   --accent:#FF0033;
+  --progress:#FF0033;
 }
 *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth;}
 body{
@@ -20,6 +21,9 @@ section{padding:4rem 8vw;}
 .hero-inner{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:center}
 .profile-image-container{width:180px;height:180px;display:grid;place-items:center}
 .profile-img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--accent);box-shadow:0 0 12px rgba(255,0,51,.25)}
+/* SVG stroke title */
+.hero-stroke-svg{width:min(92vw,1000px);height:auto}
+.hero-stroke-text{font:700 72px/1 'Orbitron',sans-serif;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .pfp-wrapper{position:relative;width:170px;height:170px;margin:0 1rem;}
 .pfp{width:100%;height:100%;border-radius:50%;border:4px solid var(--accent);object-fit:cover;}
 .orbit{pointer-events:none;position:absolute;inset:0;animation:rotate 12s linear infinite;}
@@ -54,7 +58,9 @@ section{padding:4rem 8vw;}
 .proj-card{position:relative;overflow:hidden;border:2px solid transparent;border-radius:12px;cursor:pointer;transition:.3s;}
 .proj-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
 .proj-card:hover{border-color:var(--accent);box-shadow:0 0 15px rgba(255,0,51,.5);}
-.proj-info{padding:1rem .9rem;}
+.proj-info{padding:1rem .9rem;transform:translateY(16px);opacity:.9}
+.proj-card:hover .proj-info{transform:translateY(0)}
+.proj-card .hover-msg{transition:opacity .25s,transform .25s}
 .proj-info h3{color:var(--accent);margin-bottom:.3rem;}
 .hover-msg{position:absolute;bottom:1rem;right:1.2rem;background:rgba(255,0,51,.9);color:#000;font-size:.7rem;padding:.25rem .6rem;border-radius:6px;opacity:0;transform:translateY(6px);transition:.25s;}
 .proj-card:hover .hover-msg{opacity:1;transform:translateY(0);}
@@ -68,6 +74,10 @@ section{padding:4rem 8vw;}
 /* ===== Footer ===== */
 footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:relative;}
 .backtotop{color:var(--accent);position:absolute;right:1rem;bottom:1rem;font-size:1.2rem;}
+
+/* Scroll progress bar */
+#scroll-progress{position:fixed;top:0;left:0;right:0;height:4px;background:transparent;z-index:9999}
+.scroll-progress__bar{height:100%;width:0;background:linear-gradient(90deg,var(--progress),#ff5e7a)}
 
 /* ===== Responsive tweaks ===== */
 @media(max-width:600px){

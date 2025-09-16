@@ -14,36 +14,57 @@
   <link rel="stylesheet" href="style.css">
   <!-- anime.js for motion -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script defer src="animations.js"></script>
   <script defer src="main.js"></script>
 </head>
 <body>
-  <div id="scroll-progress"><div class="scroll-progress__bar"></div></div>
+  <div id="scroll-progress"><div class="scroll-progress__bar"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <div class="nav-brand">
+        <a href="#hero" class="nav-logo">Aneesh Mussim</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link"><span class="indicator"></span>About</a></li>
+        <li><a href="#skills" class="nav-link"><span class="indicator"></span>Skills</a></li>
+        <li><a href="#experience" class="nav-link"><span class="indicator"></span>Experience</a></li>
+        <li><a href="#projects" class="nav-link"><span class="indicator"></span>Projects</a></li>
+        <li><a href="#chatbot" class="nav-link"><span class="indicator"></span>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- ===== HERO ===== -->
-  <header id="hero" class="snap">
+  <section id="hero" class="snap section">
     <div class="hero-inner">
-      <span class="name-part red">Aneesh</span>
-      <span class="name-part white">Mussim</span>
+      <h1 class="hero-title">
+        <span class="char">A</span><span class="char">n</span><span class="char">e</span><span class="char">e</span><span class="char">s</span><span class="char">h</span>
+        <span class="char">&nbsp;</span>
+        <span class="char">M</span><span class="char">u</span><span class="char">s</span><span class="char">s</span><span class="char">i</span><span class="char">m</span>
+      </h1>
       <div class="profile-image-container">
         <img src="assets/profile_circle.png" alt="Aneesh Mussim" class="profile-img">
         
         <div class="jarvis-ring" aria-hidden="true"></div>
         <div class="social-circle">
-          <a href="https://github.com/saianeesh01" target="_blank" rel="noopener noreferrer" class="icon icon1" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/aneesh-mussim" target="_blank" rel="noopener noreferrer" class="icon icon2" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:saianeesh01@gmail.com" class="icon icon3" aria-label="Email Contact"><i class="fas fa-envelope"></i></a>
-          <a href="assets/Aneesh_Mussim(resume_2025).pdf" class="icon icon4" download title="Download Resume" aria-label="Download Resume"><i class="fas fa-file-alt"></i></a>
+          <a href="https://github.com/saianeesh01" target="_blank" rel="noopener noreferrer" class="icon icon1 orbit-icon" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/aneesh-mussim" target="_blank" rel="noopener noreferrer" class="icon icon2 orbit-icon" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:saianeesh01@gmail.com" class="icon icon3 orbit-icon" aria-label="Email Contact"><i class="fas fa-envelope"></i></a>
+          <a href="assets/Aneesh_Mussim(resume_2025).pdf" class="icon icon4 orbit-icon" download title="Download Resume" aria-label="Download Resume"><i class="fas fa-file-alt"></i></a>
         </div>
       </div>
-      
     </div>
-    <p class="tagline">AI/ML &nbsp;•&nbsp; Full-Stack &nbsp;•&nbsp; Cloud-Native</p>
+    <p class="hero-subtitle tagline">AI/ML &nbsp;•&nbsp; Full-Stack &nbsp;•&nbsp; Cloud-Native</p>
+    <div class="hero-cta">
+      <a href="#about" class="btn btn-primary">Explore My Work</a>
+    </div>
     <p class="scroll-hint">↓ Scroll to explore more</p>
-
-  </header>
+  </section>
 
   <!-- ===== ABOUT ===== -->
-  <section id="about" class="snap fade">
+  <section id="about" class="snap fade section">
     <h2>About Me</h2>
     <p>
       I'm a Computer Science grad from VCU (Dec 2024) obsessed with AI/ML and building
@@ -54,7 +75,7 @@
   </section>
 
   <!-- ===== SKILLS ===== -->
-<section id="skills" class="snap fade">
+<section id="skills" class="snap fade section">
   <h2>Skills&nbsp;&amp;&nbsp;Tools</h2>
 <p class="hover-note">Hover a logo to see my proficiency ↗</p>
 
@@ -145,7 +166,7 @@
 
 
   <!-- ===== EXPERIENCE ===== -->
-<section id="experience" class="snap fade">
+<section id="experience" class="snap fade section">
   <h2>Experience</h2>
 
   <!-- draggable horizontal track -->
@@ -256,10 +277,10 @@
 
 
   <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="snap fade">
+  <section id="projects" class="snap fade section">
     <h2>Projects</h2>
     <div class="proj-grid">
-      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/proposal_scanner_prototype','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://github.com/saianeesh01/proposal_scanner_prototype','_blank')">
         <img src="assets/placeholder_court_proposal_scanne.png" alt="Proposal Scanner">
         <div class="proj-info">
           <h3>Proposal Scanner Prototype</h3>
@@ -267,7 +288,7 @@
         </div>
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
-      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/solo-leveling-task-app','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://github.com/saianeesh01/solo-leveling-task-app','_blank')">
         <img src="assets/placeholder_solo_leveling_task_app.png" alt="Solo Leveling Task App">
         <div class="proj-info">
           <h3>Solo Leveling Task App</h3>
@@ -275,7 +296,7 @@
         </div>
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
-      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/court-deadline-tracker','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://github.com/saianeesh01/court-deadline-tracker','_blank')">
         <img src="assets/placeholder_court_deadline_tracker.png" alt="Court Deadline Tracker">
         <div class="proj-info">
           <h3>Court Deadline Tracker</h3>
@@ -283,7 +304,7 @@
         </div>
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
-      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/Pomodoro','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://github.com/saianeesh01/Pomodoro','_blank')">
         <img src="assets/pomodoro_timer.png" alt="Pomodoro Timer">
         <div class="proj-info">
           <h3>Pomodoro Timer with Motivation</h3>
@@ -291,7 +312,7 @@
         </div>
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
-      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/Clothing-assistant','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://github.com/saianeesh01/Clothing-assistant','_blank')">
         <img src="assets/placeholder_clothing_consulting_robot.png" alt="Clothing Consulting Robot">
         <div class="proj-info">
           <h3>Clothing Consulting Robot</h3>
@@ -299,7 +320,7 @@
         </div>
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
-      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/PR-Tracker','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://github.com/saianeesh01/PR-Tracker','_blank')">
         <img src="assets/placeholder_fitness.png" alt="Fitness Tracker App">
         <div class="proj-info">
           <h3>Fitness Tracker App</h3>
@@ -307,7 +328,7 @@
         </div>
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
-      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/VideoGameStore','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://github.com/saianeesh01/VideoGameStore','_blank')">
         <img src="assets/placeholder_videogamestore.png" alt="Video Game Store Web Application">
         <div class="proj-info">
           <h3>Video Game Store Web Application</h3>
@@ -315,7 +336,7 @@
         </div>
         <span class="hover-msg">View&nbsp;Repo</span>
       </div>
-      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/venom-run','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://aneesh-m.itch.io/venom-run','_blank')">
         <img src="assets/venom_running.png" alt="Venom Run">
         <div class="proj-info">
           <h3>Venom Run</h3>
@@ -323,7 +344,7 @@
         </div>
         <span class="hover-msg">Click to Play</span>
       </div>
-      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/pro','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://aneesh-m.itch.io/pro','_blank')">
         <img src="assets/projectiles_placeholder.png" alt="Projectiles">
         <div class="proj-info">
           <h3>Projectiles</h3>
@@ -331,7 +352,7 @@
         </div>
         <span class="hover-msg">Click to Play</span>
       </div>
-      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/flash-run-2','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://aneesh-m.itch.io/flash-run-2','_blank')">
         <img src="assets/flash_run2_placeholder .png" alt="Flash Run 2">
         <div class="proj-info">
           <h3>Flash Run 2</h3>
@@ -339,7 +360,7 @@
         </div>
         <span class="hover-msg">Click to Play</span>
       </div>
-      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/flash-run','_blank')">
+      <div class="proj-card project-card card" onclick="window.open('https://aneesh-m.itch.io/flash-run','_blank')">
         <img src="assets/flash_run_placeholder.png" alt="Flash Run">
         <div class="proj-info">
           <h3>Flash Run</h3>
@@ -386,9 +407,40 @@ async function sendMessage() {
 }
 </script>
 
+  <!-- ===== RESUME CARD ===== -->
+  <div id="resumeCard" class="resume-card">
+    <div class="shine"></div>
+    <div class="resume-content">
+      <h3>Get My Resume</h3>
+      <p>Download my latest resume or connect with me</p>
+    </div>
+    <div class="overlay-links">
+      <a href="assets/Aneesh_Mussim(resume_2025).pdf" class="resume-link" download>
+        <i class="fas fa-file-text"></i>
+        <span>Resume</span>
+      </a>
+      <a href="https://linkedin.com/in/aneeshmussim" class="resume-link" target="_blank">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://github.com/saianeesh01" class="resume-link" target="_blank">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
+      <a href="mailto:saianeesh01@gmail.com" class="resume-link">
+        <i class="fas fa-envelope"></i>
+        <span>Email</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <footer>
     © 2025&nbsp;Aneesh&nbsp;Mussim
-    <a href="#hero" class="backtotop"><i class="fas fa-arrow-up"></i></a>
   </footer>
 </body>
 </html>

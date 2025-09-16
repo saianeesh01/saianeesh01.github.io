@@ -1,4 +1,4 @@
-/* Intersection-observer fade-ins */
+// Legacy fade-in observer (kept for compatibility)
 const faders = document.querySelectorAll('.fade');
 const obs = new IntersectionObserver(
   entries => entries.forEach(e=>{
@@ -72,56 +72,63 @@ document.querySelectorAll('.skill-logo').forEach(el=>{
   el.style.setProperty('--deg', pct * 3.6); // 100% -> 360deg
 });
 
-// main.js  (put this in the repo root)
+// Enhanced main.js with animation system integration
 document.addEventListener('DOMContentLoaded', () => {
-  const faders = document.querySelectorAll('.fade');
-
-  const io = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('show');
-          obs.unobserve(e.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  faders.forEach(el => io.observe(el));
-
   // Respect reduced motion
   const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReduced) {
-    document.querySelectorAll('.fade').forEach(el => el.classList.add('show'));
+    document.querySelectorAll('.fade, .section').forEach(el => el.classList.add('show'));
+    return;
   }
 
-  // ===== Hero entrance timeline =====
+  // ===== Navigation functionality =====
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+  
+  // Smooth scrolling for navigation links
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Active navigation indicator
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(section => navObserver.observe(section));
+
+  // ===== Hero entrance timeline (enhanced) =====
   if (window.anime) {
-    window.anime
-      .timeline({ autoplay: true })
-      .add({
-        targets: '.name-part',
-        translateY: [20, 0],
-        opacity: [0, 1],
-        delay: window.anime.stagger(80),
-        duration: 700,
-        easing: 'easeOutQuad'
-      })
-      .add({
-        targets: '.profile-img',
-        scale: [0.85, 1],
-        opacity: [0, 1],
-        duration: 600,
-        easing: 'easeOutBack'
-      }, '-=400')
-      .add({
-        targets: '.jarvis-ring',
-        opacity: [0, 0.6],
-        scale: [0.92, 1],
-        duration: 600,
-        easing: 'easeOutCubic'
-      }, '-=350');
+    // Animate navigation header
+    window.anime({
+      targets: '.site-header',
+      translateY: [-60, 0],
+      opacity: [0, 1],
+      duration: 350,
+      easing: 'easeOutQuad',
+      delay: 100
+    });
 
     // ===== Jarvis orbit icons on hover =====
     const social = document.querySelector('.social-circle');

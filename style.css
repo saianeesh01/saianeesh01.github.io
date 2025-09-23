@@ -28,7 +28,7 @@ section{padding:4rem 8vw;}
 @keyframes ring-rotate{to{transform:rotate(360deg)}}
 .profile-image-container:hover .jarvis-ring{opacity:.6;transform:scale(1)}
 .social-circle{position:absolute;inset:0;z-index:2}
-.social-circle .icon{position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;opacity:0;transform:translate(0,0) scale(.6);box-shadow:0 0 10px rgba(255,0,51,.35)}
+.social-circle .icon{position:absolute;top:50%;left:50%;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;opacity:0;transform:translate(0,0) scale(.6);box-shadow:0 0 10px rgba(255,0,51,.35);pointer-events:none;transition:opacity .25s,transform .25s}
 @media (hover:none){
   .social-circle .icon{opacity:1}
   .jarvis-ring{opacity:.5;transform:scale(1)}
@@ -36,7 +36,7 @@ section{padding:4rem 8vw;}
 .pfp-wrapper{position:relative;width:170px;height:170px;margin:0 1rem;}
 .pfp{width:100%;height:100%;border-radius:50%;border:4px solid var(--accent);object-fit:cover;}
 .orbit{pointer-events:none;position:absolute;inset:0;animation:rotate 12s linear infinite;}
-.orbit-icon{pointer-events:auto;position:absolute;width:46px;height:46px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s;}
+.orbit-icon{pointer-events:auto;position:absolute;width:40px;height:40px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s;}
 .orbit-icon:hover{background:#fff;color:var(--accent);transform:scale(1.1);}
 .orbit-icon:nth-child(1){top:0;left:50%;transform:translate(-50%,0);}
 .orbit-icon:nth-child(2){top:50%;right:0;transform:translate(0,-50%);}
@@ -179,7 +179,7 @@ footer{padding:2rem 0;text-align:center;color:#666;font-size:.85rem;position:rel
   letter-spacing:.03em;
 }
 /* hover scale remains subtle */
-.social-circle .icon:hover{transform:translate(0,0) scale(1.08)}
+.social-circle .icon:hover{transform:translate(0,0) scale(1.05)}
 
 .scroll-hint{color:var(--accent);font-family:'Orbitron',sans-serif;font-size:clamp(1rem,4vw,2rem);margin-top:20px;animation:pulseDown 2s infinite}
 

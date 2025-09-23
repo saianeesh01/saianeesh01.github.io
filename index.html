@@ -1,366 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Aneesh Mussim | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aneesh Mussim | Portfolio</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
 
-    <!-- Techy Orbitron Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Your custom CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- GitHub favicon and Font Awesome -->
-    <link rel="icon" href="https://github.com/favicon.ico">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Styles & Script -->
+  <link rel="stylesheet" href="style.css">
+  <!-- anime.js for motion -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script defer src="main.js"></script>
 </head>
-
 <body>
+  <div id="scroll-progress"><div class="scroll-progress__bar"></div></div>
 
-<div class="container">
-
-    <!-- Header & Introduction -->
-    <div class="profile-wrapper orbit-style">
-
-        <div class="profile-flex">
-            <span class="first-name">Aneesh</span>
-    
-            <div class="profile-image-container">
-                <img src="profile_circle.png" alt="Aneesh Mussim" class="profile-img">
-                <!-- Orbit icons: evenly spaced in a circle -->
-                <div class="social-circle">
-                    <a href="https://github.com/saianeesh01" target="_blank" class="icon icon1"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/aneesh-mussim/" target="_blank" class="icon icon2"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:saianeesh01@gmail.com" class="icon icon3"><i class="fas fa-envelope"></i></a>
-                    <a href="Aneesh_Mussim_Resume (8).pdf" download class="icon icon4" title="Download Resume"><i class="fas fa-file-alt"></i></a>
-                </div>
-            </div>
-    
-            <span class="last-name">Mussim</span>
+  <!-- ===== HERO ===== -->
+  <header id="hero" class="snap">
+    <div class="hero-inner">
+      <span class="name-part red">Aneesh</span>
+      <span class="name-part white">Mussim</span>
+      <div class="profile-image-container">
+        <img src="assets/profile_circle.png" alt="Aneesh Mussim" class="profile-img">
+        
+        <div class="jarvis-ring" aria-hidden="true"></div>
+        <div class="social-circle">
+          <a href="https://github.com/saianeesh01" target="_blank" rel="noopener noreferrer" class="icon icon1" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/aneesh-mussim" target="_blank" rel="noopener noreferrer" class="icon icon2" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:saianeesh01@gmail.com" class="icon icon3" aria-label="Email Contact"><i class="fas fa-envelope"></i></a>
+          <a href="assets/Aneesh_Mussim(resume_2025).pdf" class="icon icon4" download title="Download Resume" aria-label="Download Resume"><i class="fas fa-file-alt"></i></a>
         </div>
-    
-    </div>
-    
-    
-    
-
-
+      </div>
       
-    <!-- About Section -->
-    <section class="about">
-        <h2>🎓 About Me</h2>
-        <p>
-          I'm a Computer Science graduate from Virginia Commonwealth University (Class of December 2024), with a passion for all things AI and machine learning. I’m constantly driven to explore emerging technologies and love building intelligent systems that solve real-world problems. Outside of tech, you’ll probably find me lifting, hooping with friends, designing graphics, or immersed in a good video game — Pokémon and <em>The Last of Us</em> are my go-to titles (shoutout to Arcanine 🔥). My goal is to grow into a dynamic AI/ML engineer, blending logic and creativity to shape the future of technology.
-        </p>
-        <p class="opportunity-line">
-          🎯 I'm currently open to full-time roles in AI/ML, software engineering, or research-based positions.
-        </p>
-      </section>
+    </div>
+    <p class="tagline">AI/ML &nbsp;•&nbsp; Full-Stack &nbsp;•&nbsp; Cloud-Native</p>
+    <p class="scroll-hint">↓ Scroll to explore more</p>
 
-    <!-- Skills -->
-<section class="skills">
-    <h2>💻 Skills & Technologies</h2>
-  
-    <div class="skill-group">
-      <h3>Programming Languages</h3>
-      <div class="skill-tags">
-        <span class="skill">Java</span>
-        <span class="skill">Python</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">C</span>
-        <span class="skill">C#</span>
-        <span class="skill">PHP</span>
-        <span class="skill">CSS</span>
-        <span class="skill">MySQL</span>
-      </div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="snap fade">
+    <h2>About Me</h2>
+    <p>
+      I'm a Computer Science grad from VCU (Dec 2024) obsessed with AI/ML and building
+      end-to-end products. When I’m not coding you’ll find me lifting, hooping,
+      or grinding through <em>Pokémon</em> runs.
+    </p>
+    <p class="highlight">Open to full-time AI/ML or software engineering roles.</p>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+<section id="skills" class="snap fade">
+  <h2>Skills&nbsp;&amp;&nbsp;Tools</h2>
+<p class="hover-note">Hover a logo to see my proficiency ↗</p>
+
+  <!-- Languages -->
+  <div class="skill-category">
+    <h3>Languages</h3>
+    <div class="skill-grid">
+      <div class="skill-logo" data-skill="85"><img src="assets/skills/python-original.svg"       alt="Python"><span class="skill-tooltip">Python&nbsp;85%</span></div>
+      <div class="skill-logo" data-skill="75"><img src="assets/skills/java-original.svg"         alt="Java"><span class="skill-tooltip">Java&nbsp;85%</span></div>
+      <div class="skill-logo" data-skill="80"><img src="assets/skills/javascript-original.svg"   alt="JavaScript"><span class="skill-tooltip">JavaScript&nbsp;75%</span></div>
+      <div class="skill-logo" data-skill="65"><img src="assets/skills/c-original.svg"            alt="C"><span class="skill-tooltip">C&nbsp;60%</span></div>
+      <div class="skill-logo" data-skill="60"><img src="assets/skills/csharp-original.svg"       alt="C#"><span class="skill-tooltip">C#&nbsp;65%</span></div>
+      <div class="skill-logo" data-skill="75"><img src="assets/skills/sqlite-original.svg"       alt="SQL"><span class="skill-tooltip">SQL&nbsp;80%</span></div>
     </div>
-  
-    <div class="skill-group">
-      <h3>Frameworks & Tools</h3>
-      <div class="skill-tags">
-        <span class="skill">React</span>
-        <span class="skill">React Native</span>
-        <span class="skill">Flask</span>
-        <span class="skill">Unity</span>
-        <span class="skill">Android Studio</span>
-        <span class="skill">Docker</span>
-        <span class="skill">AWS Cloud</span>
-        <span class="skill">Amazon Bedrock</span>
-        <span class="skill">UI-Path</span>
-        <span class="skill">Jupyter</span>
-        <span class="skill">Figma</span>
-        <span class="skill">GIT CLI</span>
-        <span class="skill">REST API</span>
-      </div>
+  </div>
+
+  <!-- Frameworks & Tools -->
+  <div class="skill-category">
+    <h3>Frameworks&nbsp;&amp;&nbsp;Tools</h3>
+    <div class="skill-grid">
+      <div class="skill-logo" data-skill="80"><img src="assets/skills/react-original.svg"        alt="React"><span class="skill-tooltip">React&nbsp;75%</span></div>
+      <div class="skill-logo" data-skill="78"><img src="assets/skills/react-original.svg"        alt="React Native"><span class="skill-tooltip">React&nbsp;Native&nbsp;70%</span></div>
+      <div class="skill-logo" data-skill="55"><img src="assets/skills/angular-framework-logo-red-white-shield-icon-modern-design-1.png"               alt="Angular"><span class="skill-tooltip">Angular&nbsp;55%</span></div>
+      <div class="skill-logo" data-skill="78"><img src="assets/skills/flask.png"        alt="Flask"><span class="skill-tooltip">Flask&nbsp;78%</span></div>
+      <div class="skill-logo" data-skill="75"><img src="assets/skills/docker-original.svg"       alt="Docker"><span class="skill-tooltip">Docker&nbsp;65%</span></div>
+      <div class="skill-logo" data-skill="65"><img src="assets/skills/unity-original.svg"        alt="Unity"><span class="skill-tooltip">Unity&nbsp;45%</span></div>
+      <div class="skill-logo" data-skill="85"><img src="assets/skills/git-original.svg"          alt="Git"><span class="skill-tooltip">Git&nbsp;85%</span></div>
+      <div class="skill-logo" data-skill="70"><img src="assets/skills/github-original.svg"       alt="GitHub Actions"><span class="skill-tooltip">GitHub&nbsp;Actions&nbsp;85%</span></div>
+      <div class="skill-logo" data-skill="55"><img src="assets/skills/grpc-logo-png_seeklogo-430953.png"                  alt="gRPC"><span class="skill-tooltip">gRPC&nbsp;45%</span></div>
     </div>
-  
-    <div class="skill-group">
-      <h3>AI/ML & Data Science</h3>
-      <div class="skill-tags">
-        <span class="skill">TensorFlow</span>
-        <span class="skill">scikit-learn</span>
-        <span class="skill">Pandas</span>
-        <span class="skill">NumPy</span>
-        <span class="skill">OpenAI API</span>
-        <span class="skill">Synthetic Data Vault (SDV)</span>
-        <span class="skill">Amazon SageMaker</span>
-        <span class="skill">Amazon Rekognition</span>
-        <span class="skill">Amazon Comprehend</span>
-        <span class="skill">Amazon Forecast</span>
-        <span class="skill">Amazon Lex</span>
-        <span class="skill">Amazon Polly</span>
-        <span class="skill">Ollama</span>
-      </div>
+  </div>
+
+  <!-- Cloud & Databases -->
+  <div class="skill-category">
+    <h3>Cloud&nbsp;&amp;&nbsp;Databases</h3>
+    <div class="skill-grid">
+      <div class="skill-logo" data-skill="75"><img src="assets/skills/Amazon-Web-Services-AWS-Logo.png"             alt="AWS"><span class="skill-tooltip">AWS&nbsp;75%</span></div>
+      <div class="skill-logo" data-skill="65"><img src="assets/skills/firebase-plain.svg"        alt="Firebase"><span class="skill-tooltip">Firebase&nbsp;55%</span></div>
+      <div class="skill-logo" data-skill="80"><img src="assets/skills/mysql-original.svg"        alt="MySQL"><span class="skill-tooltip">MySQL&nbsp;80%</span></div>
+      <div class="skill-logo" data-skill="70"><img src="assets/skills/postgresql-original.svg"   alt="PostgreSQL"><span class="skill-tooltip">PostgreSQL&nbsp;70%</span></div>
+      <div class="skill-logo" data-skill="70"><img src="assets/skills/sqlite-original.svg"       alt="SQLite"><span class="skill-tooltip">SQLite&nbsp;70%</span></div>
     </div>
-  
-    <div class="skill-group">
-      <h3>Methodologies</h3>
-      <div class="skill-tags">
-        <span class="skill">Agile</span>
-        <span class="skill">User-Centered Design</span>
-        <span class="skill">User Research</span>
+  </div>
+
+  <!-- AI / ML -->
+  <div class="skill-category">
+    <h3>AI&nbsp;/&nbsp;ML</h3>
+    <div class="skill-grid">
+      <div class="skill-logo" data-skill="70"><img src="assets/skills/langchain.png"             alt="LangChain"><span class="skill-tooltip">LangChain&nbsp;70%</span></div>
+      <div class="skill-logo" data-skill="65"><img src="assets/skills/ollama-logo-png_seeklogo-593420.png"                alt="Ollama"><span class="skill-tooltip">Ollama&nbsp;70%</span></div>
+      <div class="skill-logo" data-skill="60"><img src="assets/skills/tensorflow-original.svg"   alt="TensorFlow"><span class="skill-tooltip">TensorFlow&nbsp;72%</span></div>
+      <div class="skill-logo" data-skill="70"><img src="assets/skills/scikitlearn-original.svg"  alt="scikit-learn"><span class="skill-tooltip">scikit-learn&nbsp;66%</span></div>
+      <div class="skill-logo" data-skill="60"><img src="assets/skills/FAISS.png"                 alt="FAISS"><span class="skill-tooltip">FAISS&nbsp;65%</span></div>
+      <div class="skill-logo" data-skill="75"><img src="assets/skills/huggingface-color.png"           alt="HuggingFace"><span class="skill-tooltip">HuggingFace&nbsp;40%</span></div>
+      <div class="skill-logo" data-skill="65"><img src="assets/skills/Sagemaker.png"             alt="SageMaker"><span class="skill-tooltip">SageMaker&nbsp;70%</span></div>
+    </div>
+  </div>
+<!-- DevOps & Scripting -->
+<div class="skill-category">
+  <h3>DevOps & Scripting</h3>
+  <div class="skill-grid">
+    <div class="skill-logo" data-skill="72">
+      <img src="assets/skills/powershell.svg" alt="PowerShell" />
+      <span class="skill-tooltip">PowerShell&nbsp;72%</span>
+    </div>
+    <div class="skill-logo" data-skill="65">
+      <img src="assets/skills/ansible.jpg" alt="Ansible" />
+      <span class="skill-tooltip">Ansible&nbsp;65%</span>
+    </div>
+    <div class="skill-logo" data-skill="68">
+      <img src="assets/skills/ASPNET.png" alt="ASP.NET MVC" />
+      <span class="skill-tooltip">ASP.NET&nbsp;MVC&nbsp;68%</span>
+    </div>
+  </div>
+</div>
+
+  <!-- Methods -->
+  <div class="skill-category">
+    <h3>Methods</h3>
+    <div class="skill-grid">
+      <div class="skill-logo" data-skill="90"><i class="fas fa-users"></i><span class="skill-tooltip">Agile&nbsp;80%</span></div>
+      <div class="skill-logo" data-skill="70"><i class="fas fa-vial"></i><span class="skill-tooltip">TDD&nbsp;68%</span></div>
+      <div class="skill-logo" data-skill="75"><i class="fas fa-user-check"></i><span class="skill-tooltip">User-Centred&nbsp;Design&nbsp;65%</span></div>
+      <div class="skill-logo" data-skill="80"><i class="fas fa-sync-alt"></i><span class="skill-tooltip">CI/CD&nbsp;85%</span></div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="snap fade">
+  <h2>Experience</h2>
+
+  <!-- draggable horizontal track -->
+  <div class="exp-track" id="expTrack">
+    <!-- === Insicloud === -->
+    <article class="exp-card">
+  <header>
+    <h3>AI/ML Engineer <span>@ Insicloud</span></h3>
+    <time>Jan 2025 – Present</time>
+  </header>
+  <p>OCR & TTS micro-services (AWS Bedrock) down 40 % turnaround.</p>
+
+  <ul class="chips">
+  <li><img src="assets/skills/python-original.svg"  alt="">Python</li>
+  <li><img src="assets/skills/amazon-bedrock-logo-grayscale-caee.png"          alt="">Bedrock</li>
+  <li><img src="assets/skills/flask.png"            alt="">Flask</li>
+  <li><img src="assets/skills/react-original.svg"            alt="">React</li>
+  <li><img src="assets/skills/ollama-logo-png_seeklogo-593420.png"           alt="">Ollama</li>
+  <li><img src="assets/skills/langchain.png"        alt="">LangChain</li>
+  <li><img src="assets/skills/docker-original.svg"  alt="">Docker</li>
+</ul>
+</article>
+
+
+    <!-- === Capital One – ML Researcher === -->
+    <article class="exp-card">
+      <header>
+        <h3>ML Researcher <span>@ Capital One</span></h3>
+        <time>Sep 2022 – Apr 2023</time>
+      </header>
+      <p>Real-time log pipeline (10 K ev/s) up 40 % incident visibility; synthetic threats down 25 % FPs.</p>
+      <ul class="chips">
+  <li><img src="assets/skills/aws-lambda-1.svg"     alt="">AWS Lambda</li>
+  <li><img src="assets/skills/aws-kinesis-logo-png_seeklogo-306153.png"    alt="">Kinesis</li>
+  <li><img src="assets/skills/mysql-original.svg"            alt="">SQL</li>
+  <li><img src="assets/skills/nlp-natural-language-processing.png"            alt="">NLP</li>
+  <li><img src="assets/skills/datadog-1.svg"        alt="">Vector</li>
+  <li><img src="assets/skills/raspberry-pi-logo.svg"   alt="">Raspberry Pi</li>
+</ul>
+
+    </article>
+
+    <!-- === Teaching Assistant === -->
+    <article class="exp-card">
+      <header>
+        <h3>Teaching Assistant <span>@ VCU CS Dept</span></h3>
+        <time>Aug 2023 – Dec 2023</time>
+      </header>
+      <p>Led Java labs & code clinics; improved pass rate 15 %.</p>
+      <ul class="chips">
+  <li><img src="assets/skills/java-original.svg" alt="">Java</li>
+  <li><img src="assets/skills/mentoring.svg"      alt="">Mentoring</li>
+  <li><img src="assets/skills/git-original.svg"   alt="">Git</li>
+</ul>
+
+    </article>
+
+    <!-- === Bank of America === -->
+    <article class="exp-card">
+      <header>
+        <h3>Software Dev Intern <span>@ Bank of America</span></h3>
+        <time>Mar 2022 – Oct 2022</time>
+      </header>
+      <p>React Native literacy app; CI/CD (GitHub Actions) down 50 % deploy time.</p>
+      <ul class="chips">
+  <li><img src="assets/skills/react-original.svg"          alt="">React Native</li>
+  <li><img src="assets/skills/flask.png"          alt="">Flask</li>
+  <li><img src="assets/skills/sqlite-original.svg"alt="">SQLite</li>
+  <li><img src="assets/skills/github-original.svg"alt="">CI/CD</li>
+  <li><img src="assets/skills/figma.svg"          alt="">Figma</li>
+  <li><img src="assets/skills/usertest.svg"       alt="">User Testing</li>
+</ul>
+    </article>
+
+    <!-- === VCU Social-Good Web Dev === -->
+    <article class="exp-card">
+      <header>
+        <h3>Web Developer <span>@ VCU Social Good</span></h3>
+        <time>Aug 2022 – Dec 2022</time>
+      </header>
+      <p>JavaScript site for safe night transport; added real-time bus tracking & alerts.</p>
+      <ul class="chips">
+  <li><img src="assets/skills/javascript-original.svg" alt="">JavaScript</li>
+  <li><img src="assets/skills/react-original.svg"               alt="">React</li>
+  <li><img src="assets/skills/flask.png"               alt="">Flask</li>
+  <li><img src="assets/skills/rest.svg"                alt="">REST API</li>
+  <li><img src="assets/skills/uiux.svg"                alt="">UI/UX</li>
+</ul>
+    </article>
+
+    <!-- === Peer Tutor === -->
+    <article class="exp-card">
+      <header>
+        <h3>Peer Tutor <span>@ VCU CS Dept</span></h3>
+        <time>Aug 2021 – Dec 2021</time>
+      </header>
+      <p>Taught introductory Java; ran weekly support sessions, boosting grades & confidence.</p>
+      <ul class="chips">
+  <li><img src="assets/skills/java-original.svg" alt="">Java</li>
+  <li><img src="assets/skills/teaching.svg"      alt="">Teaching</li>
+  <li><img src="assets/skills/debug.svg"         alt="">Debugging</li>
+</ul>
+
+    </article>
+  </div>
+</section>
+
+
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="snap fade">
+    <h2>Projects</h2>
+    <div class="proj-grid">
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/proposal_scanner_prototype','_blank')">
+        <img src="assets/placeholder_court_proposal_scanne.png" alt="Proposal Scanner">
+        <div class="proj-info">
+          <h3>Proposal Scanner Prototype</h3>
+          <p>AI-powered document scanner using OCR, AWS Textract, FAISS, and LLM summarization for hybrid structured/unstructured document analysis. Supports S3/local, highlights fields, and logs scan history.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/solo-leveling-task-app','_blank')">
+        <img src="assets/placeholder_solo_leveling_task_app.png" alt="Solo Leveling Task App">
+        <div class="proj-info">
+          <h3>Solo Leveling Task App</h3>
+          <p>Gamified productivity app with React Native/Flask, daily AI-generated quests, XP/streak tracking, and LangChain+Ollama quest suggestions. Animated UI, streak rewards, and local persistence.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/court-deadline-tracker','_blank')">
+        <img src="assets/placeholder_court_deadline_tracker.png" alt="Court Deadline Tracker">
+        <div class="proj-info">
+          <h3>Court Deadline Tracker</h3>
+          <p>Legal productivity tool (Flask/React) for attorneys to track/manage court deadlines with natural language input, Google Calendar sync, NER/AI parsing, and real-time alerts.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/Pomodoro','_blank')">
+        <img src="assets/pomodoro_timer.png" alt="Pomodoro Timer">
+        <div class="proj-info">
+          <h3>Pomodoro Timer with Motivation</h3>
+          <p>React/Flask Pomodoro timer with animated running character, motivational texts, and creative UI/UX for productivity and focus.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/Clothing-assistant','_blank')">
+        <img src="assets/placeholder_clothing_consulting_robot.png" alt="Clothing Consulting Robot">
+        <div class="proj-info">
+          <h3>Clothing Consulting Robot</h3>
+          <p>UiPath/web automation system for weather-based clothing suggestions. Scrapes real-time weather and suggests attire using logic and automation.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/PR-Tracker','_blank')">
+        <img src="assets/placeholder_fitness.png" alt="Fitness Tracker App">
+        <div class="proj-info">
+          <h3>Fitness Tracker App</h3>
+          <p>Full-stack fitness tracking app (React/Flask/MySQL) with RESTful APIs, dynamic dashboard, and Dockerized deployment for scalability.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://github.com/saianeesh01/VideoGameStore','_blank')">
+        <img src="assets/placeholder_videogamestore.png" alt="Video Game Store Web Application">
+        <div class="proj-info">
+          <h3>Video Game Store Web Application</h3>
+          <p>Full-stack eCommerce platform (HTML/CSS/JS, PHP/MySQL) for browsing, purchasing, and reviewing games. Responsive design, Dockerized, and version controlled.</p>
+        </div>
+        <span class="hover-msg">View&nbsp;Repo</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/venom-run','_blank')">
+        <img src="assets/venom_running.png" alt="Venom Run">
+        <div class="proj-info">
+          <h3>Venom Run</h3>
+          <p>Unity/C# endless runner with symbiote theme, tight movement, reactive enemies, and layered parallax backgrounds. Creative deep dive into fast-paced level design.</p>
+        </div>
+        <span class="hover-msg">Click to Play</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/pro','_blank')">
+        <img src="assets/projectiles_placeholder.png" alt="Projectiles">
+        <div class="proj-info">
+          <h3>Projectiles</h3>
+          <p>2D sprite-based fighting game (Unity/C#) with pop culture characters, animated attacks, and arcade-style combat systems.</p>
+        </div>
+        <span class="hover-msg">Click to Play</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/flash-run-2','_blank')">
+        <img src="assets/flash_run2_placeholder .png" alt="Flash Run 2">
+        <div class="proj-info">
+          <h3>Flash Run 2</h3>
+          <p>Sequel to Flash Run: smoother animations, smarter enemies, cinematic VFX, and progressive difficulty. Optimized C# scripts and frame-perfect transitions.</p>
+        </div>
+        <span class="hover-msg">Click to Play</span>
+      </div>
+      <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/flash-run','_blank')">
+        <img src="assets/flash_run_placeholder.png" alt="Flash Run">
+        <div class="proj-info">
+          <h3>Flash Run</h3>
+          <p>My first programming project: 2D endless runner (Unity/C#) inspired by The Flash and Mega Man. Hand-animated sprites, hit detection, and game logic.</p>
+        </div>
+        <span class="hover-msg">Click to Play</span>
       </div>
     </div>
   </section>
-  
-    
-
-    <!-- Experience -->
-    <section class="experience">
-        <h2>🚀 Professional Experience</h2>
-    
-        <div class="exp-item">
-            <h3>Insicloud | AI/ML Intern</h3>
-            <span>Jan 2025 – Present</span>
-            <ul>
-                <li>Developed and deployed AI/ML models focused on improving data accuracy, readability, and interpretability across business use cases.</li>
-                <li>Built and curated large-scale training datasets to support robust machine learning performance.</li>
-                <li>Implemented intelligent evaluation systems using agentic AI to automate decision-making and increase efficiency.</li>
-            </ul>
-        </div>
-    
-        <div class="exp-item">
-            <h3>Virginia Commonwealth University – CS Department | Teaching Assistant</h3>
-            <span>Aug 2023 – Dec 2023</span>
-            <ul>
-                <li>Guided students through Java programming assignments and theoretical concepts in computer science courses.</li>
-                <li>Conducted tutoring sessions, reviewed code, and provided constructive feedback on assignments.</li>
-                <li>Collaborated with faculty to develop teaching materials and improve student learning outcomes.</li>
-            </ul>
-        </div>
-    
-        <div class="exp-item">
-            <h3>Bank of America | Software Development Intern</h3>
-            <span>Mar 2022 – Oct 2022</span>
-            <ul>
-                <li>Developed a cross-platform mobile app using React Native aimed at enhancing financial literacy for college students.</li>
-                <li>Led user research efforts and applied feedback to optimize the app's UI/UX and engagement.</li>
-                <li>Successfully deployed the application on both iOS and Android platforms.</li>
-            </ul>
-        </div>
-    
-        <div class="exp-item">
-            <h3>Capital One | Capstone Project</h3>
-            <span>Aug 2022 – Apr 2023</span>
-            <ul>
-                <li>Built a real-time cybersecurity event pipeline using AWS services and Datadog’s Vector for secure log processing.</li>
-                <li>Applied natural language processing (NLP) and Synthetic Data Vault to simulate and analyze potential security threats.</li>
-                <li>Collaborated with a multi-disciplinary team to deliver a production-ready solution for incident analysis.</li>
-            </ul>
-        </div>
-    
-        <div class="exp-item">
-            <h3>Virginia Commonwealth University – VCU Software for Social Good (VIP Project)</h3>
-            <span>Aug 2022 – Dec 2022</span>
-            <ul>
-                <li>Worked with a team to design a JavaScript-based website aimed at improving night-time student transportation safety on campus.</li>
-                <li>Implemented features such as real-time bus tracking, user-friendly schedules, emergency alerts, and account security.</li>
-                <li>Focused on enhancing campus accessibility and safety through practical software solutions.</li>
-            </ul>
-        </div>
-    
-        <div class="exp-item">
-            <h3>Virginia Commonwealth University – CS Department | Peer Tutor</h3>
-            <span>Aug 2021 – Dec 2021</span>
-            <ul>
-                <li>Assisted students with introductory Java programming labs, debugging, and foundational computer science concepts.</li>
-                <li>Held regular support sessions to guide students through their coursework and enhance their understanding of Java.</li>
-                <li>Strengthened personal programming skills while helping peers succeed academically.</li>
-            </ul>
-        </div>
-    </section>
-    
-
-    <!-- Projects -->
-    <section class="projects">
-        <h2>📁 Projects</h2>
-        <div class="project-card" onclick="window.open('https://github.com/saianeesh01/proposal_scanner_prototype', '_blank')">
-            <div class="project-item">
-                <h3>Proposal Scanner Prototype</h3>
-                <span>May 2025</span>
-                <ul>
-                    <li>AI-powered document scanner designed to detect and summarize immigration-related proposal documents using OCR and NLP.</li>
-                    <li>Built with Flask and integrated with AWS Textract, FAISS, and LLM summarization for hybrid structured/unstructured document analysis.</li>
-                    <li>Supports both local and S3-based scanning, highlights structured fields, uses keyword boosting, and flags ambiguous cases.</li>
-                    <li>Includes FAISS document classification, LLM summary generation, dynamic frontend UI with toggle panels, and scan history logging.</li>
-                </ul>
-                <div class="hover-msg">Click for Repo</div>
-            </div>
-        </div>
-        <div class="project-card" onclick="window.open('https://github.com/saianeesh01/solo-leveling-task-app', '_blank')">
-            <div class="project-item">
-                <h3>Solo Leveling Task App</h3>
-                <span>May 2025</span>
-                <ul>
-                    <li>Inspired by the Solo Leveling anime, this gamified productivity app helps users build daily habits through quests and XP leveling.</li>
-                    <li>Built with React Native and Flask backend; supports user-specific core tasks, daily AI-generated quests, and XP/streak tracking.</li>
-                    <li>Features LangChain + Ollama integration to suggest real-life quests based on goal and streak, with caching and async-safe logic.</li>
-                    <li>Includes checkable core tasks, level-based titles, streak rewards, animated progress UI, and local persistence per user.</li>
-                </ul>
-                <div class="hover-msg">Click for Repo</div>
-            </div>
-        </div>
-        <div class="project-card" onclick="window.open('https://github.com/saianeesh01/court-deadline-tracker', '_blank')">
-            <div class="project-item">
-                <h3>Court Deadline Tracker</h3>
-                <span>Apr 2025</span>
-                <ul>
-                    <li>Built a legal productivity tool using Flask and React that helps attorneys track and manage court deadlines with natural language input.</li>
-                    <li>Integrated Google Calendar API and OAuth2 to allow per-user syncing of deadlines and automatic event creation with reminders.</li>
-                    <li>Implemented intelligent parsing using regex, spaCy NER, and AI fallback via Ollama to support inputs like “Reply due 10 days after April 1.”</li>
-                    <li>Enabled real-time email alerts, edit/delete syncing with calendar, and a clean, mobile-friendly UI with calendar view and filters.</li>
-                </ul>
-                <div class="hover-msg">Click for Repo</div>
-            </div>
-        </div>
-        <div class="project-card" onclick="window.open('https://github.com/saianeesh01/Pomodoro', '_blank')">
-            <div class="project-item">
-                <h3>Pomodoro Timer with Motivation</h3>
-                <span>Feb 2025</span>
-                <ul>
-                    <li>Developed a Pomodoro timer using React for the frontend and Flask for the backend to promote productivity and focus.</li>
-                    <li>Animated a running character and implemented motivational texts to keep users engaged during sessions.</li>
-                    <li>Showcased creative use of UI/UX, animation, and media integration in a time-tracking productivity tool.</li>
-                </ul>
-                <div class="hover-msg">Click for Repo</div>
-            </div>
-        </div>
-        <div class="project-card" onclick="window.open('https://github.com/saianeesh01/Clothing-assistant', '_blank')">
-            <div class="project-item">
-                <h3>Clothing Consulting Robot</h3>
-                <span>Jul 2024</span>
-                <ul>
-                    <li>Automated a weather-based clothing suggestion system using UiPath and web automation.</li>
-                    <li>Integrated web scraping to retrieve real-time weather conditions and suggest appropriate attire.</li>
-                    <li>Enhanced decision-making flow by combining automation, logic, and real-world practicality.</li>
-                </ul>
-                <div class="hover-msg">Click for Repo</div>
-            </div>
-        </div>
-        <div class="project-card" onclick="window.open('https://github.com/saianeesh01/PR-Tracker', '_blank')">
-            <div class="project-item">
-                <h3>Fitness Tracker App</h3>
-                <span>Dec 2024</span>
-                <ul>
-                    <li>Built a full-stack fitness tracking web app using React (frontend), Flask (backend), and MySQL for data storage.</li>
-                    <li>Created RESTful APIs for seamless data handling and dynamic dashboard updates.</li>
-                    <li>Containerized the app using Docker for easy deployment, scalability, and environment consistency.</li>
-                </ul>
-                <div class="hover-msg">Click for Repo</div>
-            </div>
-        </div>
-        <div class="project-card" onclick="window.open('https://github.com/saianeesh01/VideoGameStore', '_blank')">
-            <div class="project-item">
-                <h3>Video Game Store Web Application</h3>
-                <span>May 2024</span>
-                <ul>
-                    <li>Designed a full-stack eCommerce platform allowing users to browse, purchase, and review video games.</li>
-                    <li>Built the frontend using HTML, CSS, and JavaScript with a focus on responsive design and user experience.</li>
-                    <li>Implemented backend functionality using PHP and MySQL to manage users, inventory, and transaction logs.</li>
-                    <li>Used Docker to containerize the app, and Git/GitHub for version control and collaboration.</li>
-                </ul>
-                <div class="hover-msg">Click for Repo</div>
-            </div>
-        </div>
-        <div class="project-card" onclick="window.open('https://aneesh-m.itch.io/venom-run', '_blank')">
-            <div class="project-item">
-                <h3>Venom Run</h3>
-                <span>2019</span>
-                <ul>
-                    <li><strong>Venom Run</strong> is a symbiote-themed endless runner that pushes the chaos and speed of the Flash Run series into overdrive.</li>
-                    <li>Designed tight movement mechanics, reactive enemy logic, and eerie visual effects using Unity and C#.</li>
-                    <li>Used Photoshop to animate symbiote-inspired sprites, and implemented layered parallax backgrounds to heighten immersion.</li>
-                    <li>This project was a creative deep dive into darker aesthetics, player tension, and the art of fast-paced level design.</li>
-                </ul>
-                <div class="hover-msg">Click to Play</div>
-            </div>
-        </div>
-        <div class="project-card" onclick="window.open('https://aneesh-m.itch.io/pro', '_blank')">
-            <div class="project-item">
-                <h3>Projectiles</h3>
-                <span>2019</span>
-                <ul>
-                    <li><strong>Projectiles</strong> is a 2D sprite-based fighting game where characters from across pop culture launch signature projectile attacks.</li>
-                    <li>Created animated attack sequences in Photoshop and scripted combat logic, character switching, and projectile physics in Unity with C#.</li>
-                    <li>Fine-tuned hitboxes, visual feedback, and stage transitions to make gameplay feel responsive and arcade-authentic.</li>
-                    <li>This was my first time building combat systems, and it taught me how to merge animation, logic, and gameplay flow into a single design.</li>
-                </ul>
-                <div class="hover-msg">Click to Play</div>
-            </div>
-        </div>
-        <div class="project-card" onclick="window.open('https://aneesh-m.itch.io/flash-run-2', '_blank')">
-            <div class="project-item">
-                <h3>Flash Run 2</h3>
-                <span>2017</span>
-                <ul>
-                    <li><strong>Flash Run 2</strong> expanded on everything I learned from building the original: smoother animations, smarter enemies, and a more polished user experience.</li>
-                    <li>Introduced background music, a progressive difficulty curve, and enhanced VFX to make every sprint feel cinematic and satisfying.</li>
-                    <li>Refactored earlier C# scripts to optimize performance and cleaned up animations with frame-perfect transitions from Photoshop.</li>
-                    <li>This sequel gave me confidence in iteration — how much better a project can get with more experience and creative vision.</li>
-                </ul>
-                <div class="hover-msg">Click to Play</div>
-            </div>
-        </div>
-        <div class="project-card" onclick="window.open('https://aneesh-m.itch.io/flash-run', '_blank')">
-            <div class="project-item">
-                <h3>Flash Run</h3>
-                <span>2017</span>
-                <ul>
-                    <li><strong>Flash Run</strong> was where it all started — my very first programming project, built with Unity and C# during high school.</li>
-                    <li>A 2D endless runner inspired by The Flash and Mega Man sprites, featuring basic projectile mechanics and reactive obstacles.</li>
-                    <li>I used sprite sheets to hand-animate movement states, coded hit detection and game logic, and watched my ideas come alive on screen.</li>
-                    <li>It wasn’t perfect — but building this game lit the spark that made me fall in love with creating things through code. Everything else started here.</li>
-                </ul>
-                <div class="hover-msg">Click to Play</div>
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- Certifications -->
-    <section class="certifications">
-        <h2>📜 Certifications</h2>
-        <ul>
-            <li>AWS Certified AI Practitioner - April 2025</li>
-            <li>Agile Software Development - May 2022</li>
-            <li>IBM Big Data 101 - March 2022</li>
-            <li>IBM Introduction to Cloud - March 2022</li>
-        </ul>
-    </section>
 
 
-      
+<script>
+document.getElementById('expTrack').addEventListener('mousedown', e=>{
+  const track=e.currentTarget; let startX=e.pageX, scroll=track.scrollLeft;
+  function move(ev){track.scrollLeft = scroll - (ev.pageX - startX);}
+  function stop(){window.removeEventListener('mousemove',move);window.removeEventListener('mouseup',stop);}
+  window.addEventListener('mousemove',move); window.addEventListener('mouseup',stop);
+});
+</script>
+<section id="chatbot">
+  <h2>Ask My AI Chatbot</h2>
+  <div id="chat-box"></div>
+  <input type="text" id="user-input" placeholder="Ask me anything..." />
+  <button onclick="sendMessage()">Send</button>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Aneesh Mussim. All rights reserved.</p>
-    </footer>
+<script>
+async function sendMessage() {
+  const input = document.getElementById('user-input');
+  const message = input.value;
+  if (!message) return;
 
- 
+  const response = await fetch('https://aneesh-chatbot-backend.onrender.com/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message })
+  });
 
-</div>
+  const data = await response.json();
+  const chatBox = document.getElementById('chat-box');
+  chatBox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+  chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
+  input.value = '';
+}
+</script>
 
+  <footer>
+    © 2025&nbsp;Aneesh&nbsp;Mussim
+    <a href="#hero" class="backtotop"><i class="fas fa-arrow-up"></i></a>
+  </footer>
 </body>
 </html>

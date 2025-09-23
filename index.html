@@ -15,13 +15,60 @@
   <script defer src="main.js"></script>
 </head>
 <body>
-  <div id="scroll-progress"><div class="scroll-progress__bar"></div></div>
+  <div id="scroll-progress"><div class="scroll-progress__bar"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="#hero" class="nav-logo">Aneesh Mussim</a>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="#about" class="nav-link" data-text="About">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#chatbot" class="nav-link" data-text="Contact">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
 
   <!-- ===== HERO ===== -->
-  <header id="hero" class="snap">
-    <div class="hero-inner">
-      <span class="name-part red">Aneesh</span>
-      <span class="name-part white">Mussim</span>
+  <section id="hero" class="snap hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="name-part red">Aneesh</span>
+          <span class="name-part white">Mussim</span>
+        </h1>
+        <p class="hero-subtitle">AI/ML &nbsp;•&nbsp; Full-Stack &nbsp;•&nbsp; Cloud-Native</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="assets/Aneesh_Mussim(resume_2025).pdf" class="btn btn-secondary" download>
+            <span>Download Resume</span>
+            <i class="fas fa-download"></i>
+          </a>
+        </div>
+      </div>
+      
       <div class="profile-image-container">
         <img src="assets/profile_circle.png" alt="Aneesh Mussim" class="profile-img">
         
@@ -33,12 +80,10 @@
           <a href="assets/Aneesh_Mussim(resume_2025).pdf" class="icon icon4" download title="Download Resume" aria-label="Download Resume"><i class="fas fa-file-alt"></i></a>
         </div>
       </div>
-      
     </div>
-    <p class="tagline">AI/ML &nbsp;•&nbsp; Full-Stack &nbsp;•&nbsp; Cloud-Native</p>
+    
     <p class="scroll-hint">↓ Scroll to explore more</p>
-
-  </header>
+  </section>
 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="snap fade">

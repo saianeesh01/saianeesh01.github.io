@@ -739,8 +739,10 @@ section h2::after {
 }
 
 .about-card {
-  background: var(--bg);
-  border: 1px solid var(--border-color);
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 2rem;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1343,19 +1345,27 @@ section h2::after {
 
 .proj-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
+@media (max-width: 480px) {
+  .proj-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .proj-card {
-  background: var(--bg-secondary);
+  background: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   position: relative;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   opacity: 0;
   transform: translateY(50px) rotateX(10deg);
 }

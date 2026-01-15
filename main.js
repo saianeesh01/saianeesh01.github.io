@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   hideLoadingScreen();
 
   // ===== ReactBits-Inspired Animations =====
-  
+
   // Particle System
   function createParticles() {
     const container = document.getElementById('particles-container');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function typeWriter() {
       const currentText = texts[currentTextIndex];
-      
+
       if (isDeleting) {
         typewriterElement.textContent = currentText.substring(0, currentCharIndex - 1);
         currentCharIndex--;
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function initSkillAnimations() {
     document.querySelectorAll('.skill-logo').forEach((logo, index) => {
       logo.style.animationDelay = `${index * 0.1}s`;
-      
+
       logo.addEventListener('mouseenter', () => {
         logo.style.transform = 'translateY(-10px) scale(1.1)';
         logo.style.boxShadow = '0 20px 40px rgba(255, 0, 51, 0.4)';
@@ -145,10 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // About section card animations
   function initAboutAnimations() {
     const aboutCards = document.querySelectorAll('.about-card');
-    
+
     aboutCards.forEach((card, index) => {
       card.style.animationDelay = `${index * 0.2}s`;
-      
+
       // Add staggered animation
       setTimeout(() => {
         card.classList.add('animate-in');
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
       item.addEventListener('mouseenter', () => {
         item.style.transform = 'translateX(10px) scale(1.05)';
       });
-      
+
       item.addEventListener('mouseleave', () => {
         item.style.transform = 'translateX(0) scale(1)';
       });
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.style.transform = 'translateX(15px)';
         item.style.borderLeftWidth = '6px';
       });
-      
+
       item.addEventListener('mouseleave', () => {
         item.style.transform = 'translateX(0)';
         item.style.borderLeftWidth = '4px';
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoLoopTrack = document.getElementById('logoLoopTrack');
     const proficiencyTooltip = document.getElementById('proficiencyTooltip');
     const logoItems = document.querySelectorAll('.logo-item');
-    
+
     if (!logoLoopTrack) return;
 
     // Pause on hover
@@ -199,12 +199,21 @@ document.addEventListener('DOMContentLoaded', () => {
       logoLoopTrack.classList.remove('paused');
     });
 
+    // Pause on touch for mobile
+    logoLoopTrack.addEventListener('touchstart', () => {
+      logoLoopTrack.classList.add('paused');
+    });
+
+    logoLoopTrack.addEventListener('touchend', () => {
+      logoLoopTrack.classList.remove('paused');
+    });
+
     // Handle logo item interactions
     logoItems.forEach(item => {
       item.addEventListener('mouseenter', (e) => {
         const skill = item.getAttribute('data-skill');
         const proficiency = parseInt(item.getAttribute('data-proficiency'));
-        
+
         showProficiencyTooltip(e, skill, proficiency);
       });
 
@@ -231,13 +240,13 @@ document.addEventListener('DOMContentLoaded', () => {
     tooltipSkill.textContent = skill;
     tooltipPercentage.textContent = `${proficiency}%`;
     proficiencyFill.style.width = `${proficiency}%`;
-    
+
     // Set proficiency level
     let level = 'Beginner';
     if (proficiency >= 80) level = 'Expert';
     else if (proficiency >= 60) level = 'Advanced';
     else if (proficiency >= 40) level = 'Intermediate';
-    
+
     proficiencyLevel.textContent = level;
 
     // Show tooltip
@@ -251,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const x = event.clientX;
     const y = event.clientY;
-    
+
     // Position tooltip near cursor
     tooltip.style.left = `${x + 15}px`;
     tooltip.style.top = `${y - 100}px`;
@@ -310,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const targetId = link.getAttribute('href').substring(1);
       const targetSection = document.getElementById(targetId);
-      
+
       if (targetSection) {
         targetSection.scrollIntoView({
           behavior: 'auto',
@@ -348,6 +357,29 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - expTrack.offsetLeft;
+      const walk = (x - startX) * 2;
+    });
+
+    // Touch events for mobile
+    expTrack.addEventListener('touchstart', (e) => {
+      isDown = true;
+      expTrack.classList.add('active');
+      startX = e.touches[0].pageX - expTrack.offsetLeft;
+      scrollLeft = expTrack.scrollLeft;
+    });
+
+    expTrack.addEventListener('touchend', () => {
+      isDown = false;
+      expTrack.classList.remove('active');
+    });
+
+    expTrack.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      // e.preventDefault(); // Optional: might block vertical scroll if not careful. 
+      // Only prevent default if horizontal movement is detected? 
+      // For now, let's keep it simple to avoid blocking page scroll unless we are sure.
+
+      const x = e.touches[0].pageX - expTrack.offsetLeft;
       const walk = (x - startX) * 2;
       expTrack.scrollLeft = scrollLeft - walk;
     });

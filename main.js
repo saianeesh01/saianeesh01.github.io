@@ -404,5 +404,124 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  console.log('All functionality loaded!');
-});
+  // ===== Project Modals Data & Logic =====
+  const projectsData = {
+    echosentinel: {
+      title: "EchoSentinel - Gunshot Detection Agent",
+      date: "2025",
+      img: "assets/projectiles_placeholder.png",
+      desc: "Extended a prototype for an ML model utilizing TensorFlow to filter gunshots out of background noise. This combined data from IoT devices and cameras to achieve a 35% cut in instances of false positives. A critical safety tool designed for real-time responsiveness.",
+      tags: ["Python", "TensorFlow", "Streamlit", "IoT"],
+      repo: "#", // Placeholder, update if user provides link
+      live: "#"
+    },
+    postquantum: {
+      title: "Post-Quantum Cryptography Scanner",
+      date: "2025",
+      img: "assets/placeholder_videogamestore.png",
+      desc: "Developed Flask microservices to audit SSL/TLS configurations and automate key-store management with the help of PowerShell. These security checks led to the migration of enterprises to quantum-safe encryption.",
+      tags: ["Flask", "Python", "PowerShell"],
+      repo: "#",
+      live: "#"
+    },
+    legalai: {
+      title: "LegalAI - Document Intelligence Agent",
+      date: "2025",
+      img: "assets/placeholder_court_proposal_scanne.png",
+      desc: "Dean's Research Fund Awardee. Designed and implemented a document intelligence system using frontier open-weight LLMs via Ollama. Applied structured prompt engineering, RAG, and context grounding to extract, summarize, and answer questions over legal documents with high accuracy and low hallucination rates.",
+      tags: ["React", "Flask", "Ollama", "FAISS", "RAG"],
+      repo: "#",
+      live: "#"
+    },
+    smartbottle: {
+      title: "Smart Bottle Service",
+      date: "2025",
+      img: "assets/placeholder_solo_leveling_task_app.png",
+      desc: "Built a dynamic pricing platform combining traditional regression-based demand forecasting with prompt-engineered frontier LLMs. It contextualizes pricing recommendations using event signals, venue metadata, and historical sales, enabling explainable, operator-friendly revenue optimization.",
+      tags: ["Angular", "Flask", "Python", "ML", "SQL"],
+      repo: "#",
+      live: "#"
+    },
+    fitness: {
+      title: "Fitness Tracker Web App",
+      date: "2024",
+      img: "assets/placeholder_fitness.png",
+      desc: "Developed a full-stack ASP.NET MVC web application to track user fitness metrics including workouts, exercise logs, and progress history using C# and MVC architecture. Utilized Entity Framework and SQL Server for robust data management.",
+      tags: ["ASP.NET", "C#", "SQL Server", "HTML/CSS"],
+      repo: "https://github.com/saianeesh01/PR-Tracker",
+      live: "#"
+    },
+    sololeveling: {
+      title: "Solo Leveling Task App",
+      date: "May 2025",
+      img: "assets/placeholder_solo_leveling_task_app.png",
+      desc: "Inspired by the Solo Leveling anime, this gamified productivity app helps users build daily habits through quests and XP leveling. Features LangChain + Ollama integration to suggest real-life quests based on goal and streak.",
+      tags: ["React Native", "Flask", "LangChain", "Ollama"],
+      repo: "https://github.com/saianeesh01/solo-leveling-task-app",
+      live: "#"
+    },
+    // Keep other legacy projects if necessary, mapped to their IDs
+  };
+
+  window.openProject = function (id) {
+    const data = projectsData[id];
+    if (!data) return;
+
+    // Populate Modal
+    document.getElementById('modal-title').textContent = data.title;
+    document.getElementById('modal-date').textContent = data.date;
+    document.getElementById('modal-desc').textContent = data.desc;
+    document.getElementById('modal-img').src = data.img;
+
+    const repoBtn = document.getElementById('modal-repo');
+    const liveBtn = document.getElementById('modal-live');
+
+    if (data.repo && data.repo !== '#') {
+      repoBtn.href = data.repo;
+      repoBtn.style.display = 'inline-flex';
+    } else {
+      repoBtn.style.display = 'none';
+    }
+
+    if (data.live && data.live !== '#') {
+      liveBtn.href = data.live;
+      liveBtn.style.display = 'inline-flex';
+    } else {
+      liveBtn.style.display = 'none';
+    }
+
+    // Generate Tags
+    const tagsContainer = document.getElementById('modal-tags');
+    tagsContainer.innerHTML = '';
+    data.tags.forEach(tag => {
+      const sp = document.createElement('span');
+      sp.className = 'highlight-item'; // Reuse existing class for style
+      sp.style.padding = '0.2rem 0.6rem';
+      sp.style.fontSize = '0.8rem';
+      sp.style.borderRadius = '4px';
+      sp.style.background = 'var(--bg-tertiary)';
+      sp.style.border = '1px solid var(--border-color)';
+      sp.textContent = tag;
+      tagsContainer.appendChild(sp);
+    });
+
+    const modal = document.getElementById('project-modal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+  };
+
+  window.closeModal = function () {
+    const modal = document.getElementById('project-modal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  // Close on outside click
+  document.getElementById('project-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'project-modal') {
+      window.closeModal();
+    }
+  });
+
+  console.log('Use openProject(id) to test modals');
+}); // End of DOMContentLoaded

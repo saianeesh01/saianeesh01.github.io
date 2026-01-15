@@ -409,7 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
     echosentinel: {
       title: "EchoSentinel - Gunshot Detection Agent",
       date: "2025",
-      img: "assets/projectiles_placeholder.png",
+      img: "assets/echosentinel.png",
       desc: "Extended a prototype for an ML model utilizing TensorFlow to filter gunshots out of background noise. This combined data from IoT devices and cameras to achieve a 35% cut in instances of false positives. A critical safety tool designed for real-time responsiveness.",
       tags: ["Python", "TensorFlow", "Streamlit", "IoT"],
       repo: "#", // Placeholder, update if user provides link
@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
     postquantum: {
       title: "Post-Quantum Cryptography Scanner",
       date: "2025",
-      img: "assets/placeholder_videogamestore.png",
+      img: "assets/postquantum.png",
       desc: "Developed Flask microservices to audit SSL/TLS configurations and automate key-store management with the help of PowerShell. These security checks led to the migration of enterprises to quantum-safe encryption.",
       tags: ["Flask", "Python", "PowerShell"],
       repo: "#",
@@ -427,7 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
     legalai: {
       title: "LegalAI - Document Intelligence Agent",
       date: "2025",
-      img: "assets/placeholder_court_proposal_scanne.png",
+      img: "assets/legalai.png",
       desc: "Dean's Research Fund Awardee. Designed and implemented a document intelligence system using frontier open-weight LLMs via Ollama. Applied structured prompt engineering, RAG, and context grounding to extract, summarize, and answer questions over legal documents with high accuracy and low hallucination rates.",
       tags: ["React", "Flask", "Ollama", "FAISS", "RAG"],
       repo: "#",
@@ -436,7 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
     smartbottle: {
       title: "Smart Bottle Service",
       date: "2025",
-      img: "assets/placeholder_solo_leveling_task_app.png",
+      img: "assets/smartbottle.png",
       desc: "Built a dynamic pricing platform combining traditional regression-based demand forecasting with prompt-engineered frontier LLMs. It contextualizes pricing recommendations using event signals, venue metadata, and historical sales, enabling explainable, operator-friendly revenue optimization.",
       tags: ["Angular", "Flask", "Python", "ML", "SQL"],
       repo: "#",

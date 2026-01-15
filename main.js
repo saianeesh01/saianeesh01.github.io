@@ -445,8 +445,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fitness: {
       title: "Fitness Tracker Web App",
       date: "2024",
-      img: "assets/placeholder_fitness.png",
-      desc: "Developed a full-stack ASP.NET MVC web application to track user fitness metrics including workouts, exercise logs, and progress history using C# and MVC architecture. Utilized Entity Framework and SQL Server for robust data management.",
+      img: "assets/fitness.png",
+      desc: "Developed a full-stack ASP.NET MVC web application to track user fitness metrics including workouts, exercise logs, and progress history using C# and MVC architecture. Utilized Entity Framework and SQL Server for robust data management. Integrated RESTful APIs for seamless data handling and dynamic dashboard updates.",
       tags: ["ASP.NET", "C#", "SQL Server", "HTML/CSS"],
       repo: "https://github.com/saianeesh01/PR-Tracker",
       live: "#"
@@ -454,13 +454,57 @@ document.addEventListener('DOMContentLoaded', () => {
     sololeveling: {
       title: "Solo Leveling Task App",
       date: "May 2025",
-      img: "assets/placeholder_solo_leveling_task_app.png",
-      desc: "Inspired by the Solo Leveling anime, this gamified productivity app helps users build daily habits through quests and XP leveling. Features LangChain + Ollama integration to suggest real-life quests based on goal and streak.",
+      img: "assets/sololeveling.png",
+      desc: "Inspired by the Solo Leveling anime, this gamified productivity app helps users build daily habits through quests and XP leveling. Features LangChain + Ollama integration to suggest real-life quests based on goal and streak. Built with React Native and Flask backend.",
       tags: ["React Native", "Flask", "LangChain", "Ollama"],
       repo: "https://github.com/saianeesh01/solo-leveling-task-app",
       live: "#"
     },
-    // Keep other legacy projects if necessary, mapped to their IDs
+    gamestore: {
+      title: "Video Game Store Web Application",
+      date: "May 2024",
+      img: "assets/gamestore.png",
+      desc: "Designed a full-stack eCommerce platform allowing users to browse, purchase, and review video games. Built the frontend using HTML, CSS, JavaScript. Implemented backend using PHP and MySQL. Containerized using Docker.",
+      tags: ["PHP", "MySQL", "Docker", "HTML/CSS"],
+      repo: "https://github.com/saianeesh01/VideoGameStore",
+      live: "#"
+    },
+    venomrun: {
+      title: "Venom Run",
+      date: "2019",
+      img: "assets/venomrun.png",
+      desc: "Venom Run is a symbiote-themed endless runner. Designed tight movement mechanics, reactive enemy logic, and eerie visual effects using Unity and C#. Used Photoshop to animate symbiote-inspired sprites. A creative deep dive into darker aesthetics and fast-paced level design.",
+      tags: ["Unity", "C#", "Game Design", "Photoshop"],
+      repo: "#",
+      live: "https://aneesh-m.itch.io/venom-run"
+    },
+    projectiles: {
+      title: "Projectiles",
+      date: "2019",
+      img: "assets/projectiles.png",
+      desc: "2D sprite-based fighting game where characters launch signature projectile attacks. Created animated attack sequences in Photoshop and scripted combat logic in Unity. Fine-tuned hitboxes and visual feedback for an arcade-authentic feel.",
+      tags: ["Unity", "C#", "Game Logic", "Animation"],
+      repo: "#",
+      live: "https://aneesh-m.itch.io/pro"
+    },
+    flashrun2: {
+      title: "Flash Run 2",
+      date: "2017",
+      img: "assets/flashrun2.png",
+      desc: "Expanded on the original: smoother animations, smarter enemies, and a more polished user experience. Introduced background music, a progressive difficulty curve, and enhanced VFX to make every sprint feel cinematic.",
+      tags: ["Unity", "C#", "VFX", "Level Design"],
+      repo: "#",
+      live: "https://aneesh-m.itch.io/flash-run-2"
+    },
+    flashrun: {
+      title: "Flash Run",
+      date: "2017",
+      img: "assets/flashrun.png",
+      desc: "My very first programming project. A 2D endless runner inspired by The Flash and Mega Man sprites. Hand-animated movement states and coded hit detection from scratch. The spark that made me fall in love with coding.",
+      tags: ["Unity", "C#", "First Project", "2D Art"],
+      repo: "#",
+      live: "https://aneesh-m.itch.io/flash-run"
+    },
   };
 
   window.openProject = function (id) {

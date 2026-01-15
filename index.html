@@ -627,73 +627,92 @@
             <h3>Venom Run</h3>
             <span>2019</span>
             <ul>
-              <li><strong>Venom Run</strong> is a symbiote-themed endless runner that pushes the chaos and speed of the
-                Flash Run series into overdrive.</li>
-              <li>Designed tight movement mechanics, reactive enemy logic, and eerie visual effects using Unity and C#.
-              </li>
-              <li>Used Photoshop to animate symbiote-inspired sprites, and implemented layered parallax backgrounds to
-                heighten immersion.</li>
-              <li>This project was a creative deep dive into darker aesthetics, player tension, and the art of
-                fast-paced level design.</li>
-            </ul>
-          </div>
-          <span class="hover-msg">Click to Play</span>
-        </div>
-        <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/pro','_blank')">
-          <img src="assets/projectiles_placeholder.png" alt="Projectiles">
-          <div class="proj-info">
-            <h3>Projectiles</h3>
-            <span>2019</span>
-            <ul>
-              <li><strong>Projectiles</strong> is a 2D sprite-based fighting game where characters from across pop
-                culture launch signature projectile attacks.</li>
-              <li>Created animated attack sequences in Photoshop and scripted combat logic, character switching, and
-                projectile physics in Unity with C#.</li>
-              <li>Fine-tuned hitboxes, visual feedback, and stage transitions to make gameplay feel responsive and
-                arcade-authentic.</li>
-              <li>This was my first time building combat systems, and it taught me how to merge animation, logic, and
-                gameplay flow into a single design.</li>
-            </ul>
-          </div>
-          <span class="hover-msg">Click to Play</span>
-        </div>
-        <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/flash-run-2','_blank')">
-          <img src="assets/flash_run2_placeholder .png" alt="Flash Run 2">
-          <div class="proj-info">
-            <h3>Flash Run 2</h3>
-            <span>2017</span>
-            <ul>
-              <li><strong>Flash Run 2</strong> expanded on everything I learned from building the original: smoother
-                animations, smarter enemies, and a more polished user experience.</li>
-              <li>Introduced background music, a progressive difficulty curve, and enhanced VFX to make every sprint
-                feel cinematic and satisfying.</li>
-              <li>Refactored earlier C# scripts to optimize performance and cleaned up animations with frame-perfect
-                transitions from Photoshop.</li>
-              <li>This sequel gave me confidence in iteration — how much better a project can get with more experience
-                and creative vision.</li>
-            </ul>
-          </div>
-          <span class="hover-msg">Click to Play</span>
-        </div>
-        <div class="proj-card" onclick="window.open('https://aneesh-m.itch.io/flash-run','_blank')">
-          <img src="assets/flash_run_placeholder.png" alt="Flash Run">
-          <div class="proj-info">
-            <h3>Flash Run</h3>
-            <span>2017</span>
-            <ul>
-              <li><strong>Flash Run</strong> was where it all started — my very first programming project, built with
-                Unity and C# during high school.</li>
-              <li>A 2D endless runner inspired by The Flash and Mega Man sprites, featuring basic projectile mechanics
-                and reactive obstacles.</li>
-              <li>I used sprite sheets to hand-animate movement states, coded hit detection and game logic, and watched
-                my ideas come alive on screen.</li>
-              <li>It wasn't perfect — but building this game lit the spark that made me fall in love with creating
-                things through code. Everything else started here.</li>
-            </ul>
-          </div>
-          <span class="hover-msg">Click to Play</span>
-        </div>
-      </div>
+              <!-- 5. Fitness Tracker -->
+              <div class="proj-card" onclick="openProject('fitness')">
+                <img src="assets/fitness.png" alt="Fitness Tracker">
+                <div class="proj-info">
+                  <h3>Fitness Tracker</h3>
+                  <span>2024</span>
+                  <ul>
+                    <li>Full-stack ASP.NET MVC app for workout logs and progress.</li>
+                    <li>Uses Entity Framework and SQL Server.</li>
+                  </ul>
+                </div>
+                <span class="hover-msg">View Details</span>
+              </div>
+
+              <!-- Keep Existing Projects that add value -->
+              <div class="proj-card" onclick="openProject('sololeveling')">
+                <img src="assets/sololeveling.png" alt="Solo Leveling Task App">
+                <div class="proj-info">
+                  <h3>Solo Leveling Task App</h3>
+                  <span>May 2025</span>
+                  <ul>
+                    <li>Gamified habit tracker inspired by anime mechanics.</li>
+                  </ul>
+                </div>
+                <span class="hover-msg">View Details</span>
+              </div>
+
+              <div class="proj-card" onclick="openProject('gamestore')">
+                <img src="assets/gamestore.png" alt="Video Game Store">
+                <div class="proj-info">
+                  <h3>Video Game Store</h3>
+                  <span>May 2024</span>
+                  <ul>
+                    <li>Full-stack eCommerce with PHP, MySQL, Docker.</li>
+                  </ul>
+                </div>
+                <span class="hover-msg">View Details</span>
+              </div>
+
+              <div class="proj-card" onclick="openProject('venomrun')">
+                <img src="assets/venomrun.png" alt="Venom Run">
+                <div class="proj-info">
+                  <h3>Venom Run</h3>
+                  <span>2019</span>
+                  <ul>
+                    <li>Symbiote-themed endless runner in Unity/C#.</li>
+                  </ul>
+                </div>
+                <span class="hover-msg">View Details</span>
+              </div>
+
+              <div class="proj-card" onclick="openProject('projectiles')">
+                <img src="assets/projectiles.png" alt="Projectiles">
+                <div class="proj-info">
+                  <h3>Projectiles</h3>
+                  <span>2019</span>
+                  <ul>
+                    <li>2D Fighting Game with custom pixel art.</li>
+                  </ul>
+                </div>
+                <span class="hover-msg">View Details</span>
+              </div>
+
+              <div class="proj-card" onclick="openProject('flashrun2')">
+                <img src="assets/flashrun2.png" alt="Flash Run 2">
+                <div class="proj-info">
+                  <h3>Flash Run 2</h3>
+                  <span>2017</span>
+                  <ul>
+                    <li>Sequel endless runner with enhanced VFX.</li>
+                  </ul>
+                </div>
+                <span class="hover-msg">View Details</span>
+              </div>
+
+              <div class="proj-card" onclick="openProject('flashrun')">
+                <img src="assets/flashrun.png" alt="Flash Run">
+                <div class="proj-info">
+                  <h3>Flash Run</h3>
+                  <span>2017</span>
+                  <ul>
+                    <li>My first project. Retro 2D Unity runner.</li>
+                  </ul>
+                </div>
+                <span class="hover-msg">View Details</span>
+              </div>
     </section>
 
 

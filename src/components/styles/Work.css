@@ -55,7 +55,9 @@
 }
 
 .carousel-info {
-  flex: 1;
+  flex: 1 1 50%;
+  max-width: 50%;
+  min-width: 0;
   display: flex;
   gap: 30px;
   align-items: flex-start;
@@ -108,7 +110,9 @@
 }
 
 .carousel-image-wrapper {
-  flex: 1;
+  flex: 1 1 50%;
+  max-width: 50%;
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;

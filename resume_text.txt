@@ -1,0 +1,54 @@
+Aneesh Mussim
+703-589-0168•saianeesh01@gmail.com•US Citizen
+https://linkedin.com/in/aneesh-mussim•https://saianeesh01.github.io
+TECHNICAL SKILLS/CERTIFICATIONS
+Languages:Python, C#, JavaScript/TypeScript, SQL, PowerShell, Node.js, Java, C, C++,
+Core Areas:Full-Stack Development, AI/ML, DevOps
+Frameworks/Tools:.NET, Angular, React, Flask, Ansible, Git, Github, Docker
+Platforms:AWS (Lambda, Kinesis, S3, RDS), Linux
+AI Tools:GitHub Copilot, Ollama, LangChain-style workﬂows, FAISS, Promp Engineering
+Certiﬁcations:AWS Certiﬁed AI Practitioner(2025), Google Analytics(2025)
+EXPERIENCE
+AI/ML Engineer — InsicloudJan 2025 – Present
+Remote•Chantilly, VA
+- Developed a monitoring system integrating AI-based image recognition models and sound models for real-time anomaly updates.
+Improved event detection by30%using Python, TensorFlow, and OpenCV.
+- Trained and validated a Kaggle sound classiﬁcation dataset and reached90%model accuracy in Python using TensorFlow and
+scikit-learn for feature extraction and to optimize the model.
+- Optimized the development lifecycle by implementing advanced prompt engineering workﬂows; transitioned PRD requirements into
+structured JSON speciﬁcations for AI-native tools (Cursor/Copilot), increasing feature delivery speed by50%.
+Web Application Intern — VCU College of EngineeringAug 2023 – Dec 2024
+Richmond, VA
+- Developed a real-timeVCU Bus Transit web applicationthat processed that processed over1200 route lookups per day, improving
+transit accessibility for students using React, Flask, and SQL database for data persistence
+- Optimized backend performance by reﬁning RESTful API endpoints inFlask, reducing data response latency by30%and improving
+real-time synchronization with the React frontend.
+Machine Learning Researcher (Capstone) — Capital OneNov 2022 – Apr 2023
+Richmond, VA
+- Developed fraud telemetry pipelines using AWS Lambda, Kinesis, and Datadog, while improving visibility for unusual transaction
+patterns by40%and enabling faster fraud detection.
+- Applied training of scikit-learn anomaly detection models using synthetic threat simulations to improve precision and recall for fraud
+detection in streaming data.
+Software Development Intern — Bank of AmericaJun 2021 – Oct 2022
+Richmond, VA
+- Designed and developed features for a literacy platform on mobile using React Native, Flask, and SQLite to allow real-time
+dashboards, thereby improving student progress tracking.
+- Partnered with the UI/UX design team usingFigmato translate high-ﬁdelity mockups into responsive React components.
+PROJECTS
+EchoSentinel — Gunshot Detection Agent2025
+Python•TensorFlow•Streamlit•IoT
+- Extended a prototype for an ML model utilizing TensorFlow to ﬁlter gunshots out of background noise. This combined data from IoT
+devices and cameras to achieve a35%cut in instances of false positives.
+Post-Quantum Cryptography Scanner 2025
+Flask•Python•PowerShell
+- Developed Flask microservices to audit SSL/TLS conﬁgurations and automate key-store management with the help of PowerShell.
+These security checks led to the migration of enterprises to quantum-safe encryption.
+LegalAI — Document Intelligence Agent (Dean’s Research Fund Awardee)2025
+React•Flask•Ollama•FAISS
+- Built an LLM-based document intelligence platform utilizing Ollama and FAISS for semantic-based searching and processing legal
+documents in less than 5 minutes with a React frontend and Flask web interface.
+Fitness Tracker App 2024
+Angular•Java•Spring Boot•SQL•Docker
+- Developed RESTful backend services using Java/Spring principles and API-driven architecture
+EDUCATION
+B.S. Computer Science, Virginia Commonwealth University — Dec 2025

@@ -14,7 +14,7 @@
 
 .techstack h2 {
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     color: var(--primaryText);
     text-align: center;
     font-family: 'Geist', sans-serif;
@@ -23,7 +23,7 @@
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     width: 100%;
     max-width: 1200px;
@@ -47,7 +47,7 @@
 .skills-category h3 {
     font-size: 1.5rem;
     color: var(--accentColor, #22d3ee);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
     font-weight: 500;
     letter-spacing: 1px;
@@ -96,6 +96,12 @@
 
     .techstack h2 {
         font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .skills-grid {
@@ -109,7 +115,12 @@
 }
 
 @media screen and (max-width: 480px) {
+    .skills-category {
+        padding: 1.5rem 1rem;
+    }
+
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 }

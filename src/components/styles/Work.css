@@ -282,10 +282,12 @@
 
   .carousel-info {
     width: 100%;
+    max-width: 100%;
   }
 
   .carousel-image-wrapper {
     width: 100%;
+    max-width: 100%;
   }
 
   .carousel-arrow {

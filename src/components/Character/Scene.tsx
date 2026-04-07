@@ -52,7 +52,9 @@ const Scene = () => {
       let activeMixer: THREE.AnimationMixer | null = null;
       let globalActions: any = null;
 
-      loadCharacter().then(({ gltf, mixer, actions }) => {
+      loadCharacter().then((result) => {
+        if (!result) return;
+        const { gltf, mixer, actions } = result;
         if (gltf) {
           let character = gltf.scene;
           setChar(character);

@@ -2,8 +2,16 @@
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 
+interface Project {
+  title: string;
+  category: string;
+  tools: string;
+  description: string;
+  image: string;
+  link?: string;
+}
 
-const projects = [
+const projects: Project[] = [
   {
     title: "EchoSentinel - Gunshot Detection",
     category: "AI / IoT Security",
@@ -24,6 +32,14 @@ const projects = [
     tools: "Ollama, FAISS, React, Flask",
     description: "Built an LLM-based document intelligence platform utilizing Ollama and FAISS for semantic searching, processing complex legal documents in under 5 minutes.",
     image: "/images/legalai.png",
+  },
+  {
+    title: "House Price Prediction",
+    category: "Data Science / Machine Learning",
+    tools: "R, Random Forest, ggplot2, caret, MASS",
+    description: "Built an end-to-end ML pipeline in R comparing Linear Regression and Random Forest models on the Boston Housing dataset. Engineered features like rooms_per_person and crime_log, achieving 90.7% R² with Random Forest — a 29% RMSE improvement over the linear baseline.",
+    image: "/images/house_price_prediction.png",
+    link: "https://github.com/saianeesh01/House_price_prediction",
   },
   {
     title: "Smart Bottle Service",
@@ -69,7 +85,7 @@ const Work = () => {
                 </div>
               </div>
               <div className="project-image-wrapper">
-                <WorkImage image={project.image} alt={project.title} />
+                <WorkImage image={project.image} alt={project.title} link={project.link} />
               </div>
             </div>
           ))}

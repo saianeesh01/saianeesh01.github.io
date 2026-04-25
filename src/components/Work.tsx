@@ -42,6 +42,14 @@ const projects: Project[] = [
     link: "https://github.com/saianeesh01/House_price_prediction",
   },
   {
+    title: "ATLA Subtitle Sentiment Analyzer",
+    category: "NLP / Sentiment Analysis",
+    tools: "Python, BERT, Transformers, Pandas, Matplotlib, Seaborn",
+    description: "Applied a pre-trained multilingual BERT sentiment model to 9,000+ lines of Avatar: The Last Airbender dialogue, tracking Zuko's emotional arc across all three seasons. Quantitatively revealed his redemption arc through per-episode sentiment trajectories and character comparisons.",
+    image: "/images/atla_sentiment.png",
+    link: "https://github.com/saianeesh01/ATLA-Subtitle-Sentiment-Analyzer",
+  },
+  {
     title: "Smart Bottle Service",
     category: "ML Dynamic Pricing",
     tools: "Angular, Flask, Scikit-Learn, ML",
